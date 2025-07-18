@@ -16,7 +16,7 @@ conda activate astra_qwen
 pip install -r requirements_qwen.txt
 ```
 # For Heatmap
-Navigate to the ./Composite_steering_minigpt4 subdir.
+Navigate to the ./composite_steering_minigpt4/test_steering_composite_no_benign.py subdir.
 Update these parameters:
 ```bash
     alpha_bg_ring = -0.08
