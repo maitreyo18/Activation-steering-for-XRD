@@ -1,0 +1,2174 @@
+Thu Jul 17 13:56:58 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          On  |   00000000:21:00.0 Off |                    0 |
+| N/A   31C    P0             43W /  300W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA A100 80GB PCIe          On  |   00000000:81:00.0 Off |                    0 |
+| N/A   29C    P0             43W /  300W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+/depot/amannodi/apps/ASTRA/envs/astra_minigpt/lib/python3.10/site-packages/transformers/utils/hub.py:127: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/eva_vit.py:433: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(cached_file, map_location="cpu")
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:77: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(cached_file, map_location="cpu")
+You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama.LlamaTokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565 - if you loaded a llama tokenizer from a GGUF file you can ignore this message
+The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+=== Composite Steering Generation with Multiple Anomaly Types ===
+CSV File: ./test_combined.csv
+Image Directory: ../datasets/XRD_data/one_correct/combined_images
+Layer: 16
+Loading VIT
+Loading VIT Done
+Loading Q-Former
+Loading Q-Former Done
+Loading LLAMA
+Downloading shards:   0%|          | 0/3 [00:00<?, ?it/s]Downloading shards: 100%|██████████| 3/3 [00:00<00:00, 30.30it/s]
+/depot/amannodi/apps/ASTRA/envs/astra_minigpt/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:519: UserWarning: `pad_token_id` should be positive but got -1. This will cause errors when batch generating, if there is padding. Please set `pad_token_id` explicitly by `model.generation_config.pad_token_id=PAD_TOKEN_ID` to avoid errors in generation, and ensure your `input_ids` input does not have negative values.
+  warnings.warn(
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:23<00:46, 23.17s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:44<00:22, 22.26s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:58<00:00, 18.39s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:58<00:00, 19.53s/it]
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/mini_gpt4.py:274: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(ckpt_path, map_location="cpu")
+You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama_fast.LlamaTokenizerFast'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565 - if you loaded a llama tokenizer from a GGUF file you can ignore this message.
+/scratch/gilbreth/biswasm/ASTRA_updated/composite_steering_minigpt4/./test_steering_composite.py:90: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  steering_data = torch.load(path)
+Loading LLAMA Done
+Load BLIP2-LLM Checkpoint: /scratch/gilbreth/biswasm/ASTRA_updated/ckpts/pretrained_minigpt4.pth
+[Model Initialized]
+
+=== Loading Composite Steering Vectors ===
+Alpha values:
+  Background Ring: 0.02
+  Ice Ring: 0.07
+  Loop Scattering: 0.075
+  Strong Background: 0.12
+  Non-uniform Detector: 0.1
+
+Loading background_ring from: ../CAA_modified_minigpt4/Bg_ring_act/act_diff_12-20_gen_600_standby.pt
+  ✓ Loaded background_ring vector (norm: 58.9688)
+Loading ice_ring from: ../CAA_modified_minigpt4/Ice_ring/ice_ring_act_diff_12-20_76_artifact.pt
+  ✓ Loaded ice_ring vector (norm: 58.4375)
+Loading loop_scattering from: ../CAA_modified_minigpt4/Loop_scattering/loop_scattering_act_diff_12-20_99_artifact.pt
+  ✓ Loaded loop_scattering vector (norm: 61.6562)
+Loading strong_background from: ../CAA_modified_minigpt4/Strong_background/strong_bg_act_diff_12-20_149_artifact.pt
+  ✓ Loaded strong_background vector (norm: 40.8750)
+Loading nonuniform_detector from: ../CAA_modified_minigpt4/Non-uniform_detect/act_diff_12-20_nu_detect_259_bg_ring.pt
+  ✓ Loaded nonuniform_detector vector (norm: 59.1562)
+
+=== Computing Composite Steering Vector ===
+  background_ring: alpha=0.02, contribution_norm=1.1797
+  ice_ring: alpha=0.07, contribution_norm=4.0898
+  loop_scattering: alpha=0.075, contribution_norm=4.6250
+  strong_background: alpha=0.12, contribution_norm=4.9062
+  nonuniform_detector: alpha=0.1, contribution_norm=5.9141
+
+Final composite vector norm: 11.1016
+==================================================
+Reading CSV file: ./test_combined.csv
+Found 40 items to process
+Processing items:   0%|          | 0/40 [00:00<?, ?it/s]/scratch/gilbreth/biswasm/ASTRA_updated/composite_steering_minigpt4/./test_steering_composite.py:254: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.no_grad(), torch.cuda.amp.autocast():
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:41: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  return torch.cuda.amp.autocast(dtype=dtype)
+/depot/amannodi/apps/ASTRA/envs/astra_minigpt/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:545: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+Processing items:   2%|▎         | 1/40 [00:14<09:17, 14.31s/it]Processing items:   5%|▌         | 2/40 [00:21<06:25, 10.15s/it]Processing items:   8%|▊         | 3/40 [00:28<05:26,  8.82s/it]Processing items:  10%|█         | 4/40 [00:36<04:55,  8.20s/it]Processing items:  12%|█▎        | 5/40 [00:43<04:35,  7.86s/it]Processing items:  15%|█▌        | 6/40 [00:50<04:20,  7.65s/it]Processing items:  18%|█▊        | 7/40 [00:57<04:08,  7.52s/it]Processing items:  20%|██        | 8/40 [01:05<03:57,  7.43s/it]Processing items:  22%|██▎       | 9/40 [01:12<03:48,  7.37s/it]Processing items:  25%|██▌       | 10/40 [01:19<03:39,  7.32s/it]Processing items:  28%|██▊       | 11/40 [01:26<03:31,  7.29s/it]Processing items:  30%|███       | 12/40 [01:33<03:23,  7.27s/it]Processing items:  32%|███▎      | 13/40 [01:41<03:16,  7.27s/it]Processing items:  35%|███▌      | 14/40 [01:48<03:08,  7.27s/it]Processing items:  38%|███▊      | 15/40 [01:55<03:01,  7.25s/it]Processing items:  40%|████      | 16/40 [02:02<02:54,  7.26s/it]Processing items:  42%|████▎     | 17/40 [02:10<02:46,  7.25s/it]Processing items:  45%|████▌     | 18/40 [02:17<02:39,  7.24s/it]Processing items:  48%|████▊     | 19/40 [02:24<02:32,  7.26s/it]Processing items:  50%|█████     | 20/40 [02:31<02:25,  7.26s/it]Processing items:  52%|█████▎    | 21/40 [02:39<02:17,  7.26s/it]Processing items:  55%|█████▌    | 22/40 [02:46<02:10,  7.26s/it]Processing items:  57%|█████▊    | 23/40 [02:53<02:03,  7.25s/it]Processing items:  60%|██████    | 24/40 [03:00<01:55,  7.24s/it]Processing items:  62%|██████▎   | 25/40 [03:08<01:48,  7.25s/it]Processing items:  65%|██████▌   | 26/40 [03:15<01:41,  7.24s/it]Processing items:  68%|██████▊   | 27/40 [03:22<01:34,  7.24s/it]Processing items:  70%|███████   | 28/40 [03:29<01:26,  7.24s/it]Processing items:  72%|███████▎  | 29/40 [03:37<01:19,  7.23s/it]Processing items:  75%|███████▌  | 30/40 [03:44<01:12,  7.24s/it]Processing items:  78%|███████▊  | 31/40 [03:51<01:05,  7.24s/it]Processing items:  80%|████████  | 32/40 [03:58<00:57,  7.24s/it]Processing items:  82%|████████▎ | 33/40 [04:06<00:50,  7.24s/it]Processing items:  85%|████████▌ | 34/40 [04:13<00:43,  7.23s/it]Processing items:  88%|████████▊ | 35/40 [04:20<00:36,  7.23s/it]Processing items:  90%|█████████ | 36/40 [04:27<00:28,  7.25s/it]Processing items:  92%|█████████▎| 37/40 [04:35<00:21,  7.24s/it]Processing items:  95%|█████████▌| 38/40 [04:42<00:14,  7.24s/it]Processing items:  98%|█████████▊| 39/40 [04:49<00:07,  7.24s/it]Processing items: 100%|██████████| 40/40 [04:56<00:00,  7.23s/it]Processing items: 100%|██████████| 40/40 [04:56<00:00,  7.42s/it]
+
+================================================================================
+PROCESSING ROW 1/40
+Image: 73307_1_E1_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Ice ring.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.2349, -0.4849,  1.2559,  ..., -0.7222, -1.5674, -0.3804]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.3872, -0.5254,  1.3672,  ..., -0.4194, -1.4307, -0.4019]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.3262, -0.7588,  0.4663,  ..., -1.4346, -1.7754, -0.7402]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.1738, -0.7993,  0.5781,  ..., -1.1318, -1.6387, -0.7617]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.5908, -1.0049,  0.3003,  ..., -0.2798,  0.2524, -1.4346]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.4385, -1.0459,  0.4121,  ...,  0.0229,  0.3889, -1.4561]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 2/40
+Image: idp91095a.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Ice ring.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.4839, -0.4292,  1.3564,  ..., -0.6318, -1.5127, -0.3796]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.6362, -0.4700,  1.4688,  ..., -0.3291, -1.3760, -0.4011]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.2656, -0.7847,  0.3977,  ..., -1.4404, -1.6748, -0.8838]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.1133, -0.8252,  0.5098,  ..., -1.1377, -1.5381, -0.9053]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.4111, -0.9976,  0.3684,  ..., -0.2744,  0.3003, -1.4961]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.2588, -1.0381,  0.4802,  ...,  0.0283,  0.4368, -1.5176]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 3/40
+Image: idp1254t.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Ice ring.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.3369, -0.5981,  1.2803,  ..., -0.7383, -1.5361, -0.3667]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.4893, -0.6387,  1.3926,  ..., -0.4355, -1.3994, -0.3882]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.2812, -0.6421,  0.4399,  ..., -1.4482, -1.6592, -0.8779]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.1289, -0.6826,  0.5518,  ..., -1.1455, -1.5225, -0.8994]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.4727, -0.8198,  0.2510,  ..., -0.3054,  0.3013, -1.4844]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.3203, -0.8604,  0.3628,  ..., -0.0027,  0.4377, -1.5059]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 4/40
+Image: 170434_1_E2_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Ice ring.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.4087, -0.4785,  1.2500,  ..., -0.6514, -1.5264, -0.4260]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5610, -0.5190,  1.3613,  ..., -0.3486, -1.3896, -0.4475]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.3633, -0.7383,  0.3840,  ..., -1.3857, -1.6338, -0.9653]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.2109, -0.7788,  0.4958,  ..., -1.0830, -1.4971, -0.9868]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.6055, -0.7539,  0.2881,  ..., -0.2764,  0.2617, -1.5088]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.4531, -0.7944,  0.3999,  ...,  0.0264,  0.3982, -1.5303]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 5/40
+Image: kur4-6.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Ice ring.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.2632, -0.4473,  1.2549,  ..., -0.7129, -1.4756, -0.3655]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.4155, -0.4880,  1.3672,  ..., -0.4102, -1.3389, -0.3870]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.2871, -0.6211,  0.4456,  ..., -1.4316, -1.7656, -0.8730]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.1348, -0.6616,  0.5576,  ..., -1.1289, -1.6289, -0.8945]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.5020, -0.8218,  0.4209,  ..., -0.2375,  0.2034, -1.3262]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.3496, -0.8623,  0.5327,  ...,  0.0652,  0.3398, -1.3477]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 6/40
+Image: B1_3_0001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Ice ring.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.3774, -0.4690,  1.2939,  ..., -0.6533, -1.5771, -0.3611]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5298, -0.5098,  1.4062,  ..., -0.3506, -1.4404, -0.3826]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.2539, -0.6943,  0.5342,  ..., -1.4023, -1.7002, -0.8379]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.1016, -0.7349,  0.6460,  ..., -1.0996, -1.5635, -0.8594]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.6172, -0.9023,  0.3662,  ..., -0.2325,  0.3130, -1.4111]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.4648, -0.9429,  0.4780,  ...,  0.0702,  0.4495, -1.4326]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 7/40
+Image: idp01892a.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Ice ring.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.3052, -0.5186,  1.1963,  ..., -0.7876, -1.4951, -0.3464]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.4575, -0.5591,  1.3086,  ..., -0.4849, -1.3584, -0.3679]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.2773, -0.5918,  0.4717,  ..., -1.4619, -1.8203, -0.9536]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.1250, -0.6323,  0.5835,  ..., -1.1592, -1.6836, -0.9751]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.5723, -0.9258,  0.3252,  ..., -0.4014,  0.3186, -1.4551]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.4199, -0.9663,  0.4370,  ..., -0.0986,  0.4551, -1.4766]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 8/40
+Image: 131032_3_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Ice ring.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.4246, -0.5669,  1.2852,  ..., -0.6958, -1.5146, -0.3887]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5771, -0.6074,  1.3965,  ..., -0.3931, -1.3779, -0.4102]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.2598, -0.7095,  0.4985,  ..., -1.3721, -1.8105, -0.9185]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.1074, -0.7500,  0.6104,  ..., -1.0693, -1.6738, -0.9399]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.5098, -0.8975,  0.2864,  ..., -0.3044,  0.2607, -1.4102]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.3574, -0.9380,  0.3982,  ..., -0.0017,  0.3972, -1.4316]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 9/40
+Image: p41-m3f2suc2.0001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Ice ring.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.3665, -0.5195,  1.4473,  ..., -0.6084, -1.6230, -0.4287]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5186, -0.5601,  1.5586,  ..., -0.3057, -1.4863, -0.4502]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.2480, -0.7920,  0.4385,  ..., -1.5283, -1.6572, -0.7725]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.0957, -0.8325,  0.5503,  ..., -1.2256, -1.5205, -0.7939]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.4385, -0.9927,  0.3789,  ..., -0.2759,  0.3594, -1.4453]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.2861, -1.0332,  0.4907,  ...,  0.0269,  0.4958, -1.4668]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 10/40
+Image: 109429_M2_G5_data.0001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Ice ring.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.4463, -0.4854,  1.3789,  ..., -0.6782, -1.6396, -0.4934]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5986, -0.5259,  1.4902,  ..., -0.3755, -1.5029, -0.5146]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.3047, -0.9004,  0.4773,  ..., -1.6074, -1.6621, -0.7163]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.1523, -0.9409,  0.5889,  ..., -1.3047, -1.5254, -0.7378]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.4141, -1.0635,  0.2783,  ..., -0.3206,  0.3401, -1.3135]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.2617, -1.1045,  0.3901,  ..., -0.0178,  0.4766, -1.3350]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 11/40
+Image: idp02536-1a_B.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Ice ring.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.4492, -0.4717,  1.3701,  ..., -0.7905, -1.4307, -0.4624]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.6016, -0.5122,  1.4824,  ..., -0.4878, -1.2939, -0.4839]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.3320, -0.8481,  0.4155,  ..., -1.5439, -1.6836, -0.7988]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.1797, -0.8887,  0.5273,  ..., -1.2412, -1.5469, -0.8203]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.4414, -0.9673,  0.3066,  ..., -0.4053,  0.2595, -1.4980]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.2891, -1.0078,  0.4185,  ..., -0.1025,  0.3960, -1.5195]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 12/40
+Image: tlg6_6_1_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Ice ring.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.5259, -0.4434,  1.3379,  ..., -0.6104, -1.5391, -0.3423]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.6782, -0.4841,  1.4492,  ..., -0.3076, -1.4023, -0.3638]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.2031, -0.7754,  0.3486,  ..., -1.5312, -1.7305, -0.8145]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.0508, -0.8159,  0.4604,  ..., -1.2285, -1.5938, -0.8359]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.3984, -0.9204,  0.4055,  ..., -0.3193,  0.2407, -1.3486]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.2461, -0.9609,  0.5176,  ..., -0.0166,  0.3772, -1.3701]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 13/40
+Image: 19427_1_E1_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Ice ring.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.2942, -0.5361,  1.1885,  ..., -0.6802, -1.4512, -0.3179]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.4465, -0.5767,  1.3008,  ..., -0.3774, -1.3145, -0.3394]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.2969, -0.8662,  0.2854,  ..., -1.5205, -1.7480, -0.7700]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.1445, -0.9067,  0.3972,  ..., -1.2178, -1.6113, -0.7915]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.6816, -0.9546,  0.2500,  ..., -0.3435,  0.2168, -1.4180]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.5293, -0.9951,  0.3618,  ..., -0.0408,  0.3533, -1.4395]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 14/40
+Image: 134085_1_E2_0001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Ice ring.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.4175, -0.4365,  1.2412,  ..., -0.7368, -1.4980, -0.3374]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5698, -0.4773,  1.3535,  ..., -0.4341, -1.3613, -0.3589]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.3574, -0.7744,  0.4224,  ..., -1.4092, -1.6846, -0.7852]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.2051, -0.8149,  0.5342,  ..., -1.1064, -1.5479, -0.8066]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.6104, -0.9116,  0.2367,  ..., -0.3083,  0.2363, -1.4531]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.4580, -0.9521,  0.3486,  ..., -0.0056,  0.3728, -1.4746]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 15/40
+Image: 170415_2_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Ice ring.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.2666, -0.3945,  1.1836,  ..., -0.8560, -1.5225, -0.4556]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.4189, -0.4353,  1.2949,  ..., -0.5532, -1.3857, -0.4771]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.3535, -0.6636,  0.5586,  ..., -1.4482, -1.7637, -0.9111]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.2012, -0.7041,  0.6704,  ..., -1.1455, -1.6270, -0.9326]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.5449, -0.7954,  0.2656,  ..., -0.3418,  0.2532, -1.4834]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.3926, -0.8359,  0.3774,  ..., -0.0391,  0.3896, -1.5049]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 16/40
+Image: 89651_1_E1_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Ice ring.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.3530, -0.4272,  1.1113,  ..., -0.7358, -1.3809, -0.3657]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5054, -0.4680,  1.2227,  ..., -0.4331, -1.2441, -0.3872]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.3613, -0.6689,  0.3572,  ..., -1.4248, -1.7578, -0.8945]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.2090, -0.7095,  0.4690,  ..., -1.1221, -1.6211, -0.9160]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.6758, -0.7773,  0.2988,  ..., -0.2891,  0.3020, -1.4531]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.5234, -0.8179,  0.4106,  ...,  0.0137,  0.4385, -1.4746]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 17/40
+Image: 18574_1_E1_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Ice ring.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.4482, -0.4878,  1.3809,  ..., -0.5479, -1.5771, -0.3750]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.6006, -0.5283,  1.4922,  ..., -0.2451, -1.4404, -0.3965]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.4590, -0.8472,  0.4006,  ..., -1.5039, -1.6797, -0.8896]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.3066, -0.8877,  0.5127,  ..., -1.2012, -1.5430, -0.9111]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.5713, -0.8301,  0.2175,  ..., -0.2461,  0.2810, -1.3848]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.4189, -0.8706,  0.3293,  ...,  0.0566,  0.4175, -1.4062]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 18/40
+Image: 170415_1_E2_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Ice ring.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.3191, -0.5342,  1.1670,  ..., -0.6772, -1.4561, -0.3335]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.4714, -0.5747,  1.2793,  ..., -0.3745, -1.3193, -0.3550]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.3145, -0.6025,  0.4924,  ..., -1.3945, -1.8506, -0.8682]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.1621, -0.6431,  0.6045,  ..., -1.0918, -1.7139, -0.8896]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.5938, -0.8452,  0.2344,  ..., -0.2563,  0.2747, -1.3633]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.4414, -0.8857,  0.3462,  ...,  0.0464,  0.4111, -1.3848]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 19/40
+Image: mcr7-9_2_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Ice ring.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.3853, -0.5264,  1.3926,  ..., -0.6724, -1.6260, -0.4382]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5376, -0.5669,  1.5039,  ..., -0.3696, -1.4893, -0.4597]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.4219, -0.7998,  0.3394,  ..., -1.5625, -1.6201, -0.8486]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.2695, -0.8403,  0.4512,  ..., -1.2598, -1.4834, -0.8701]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.5459, -0.9453,  0.2231,  ..., -0.3079,  0.3638, -1.3604]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.3936, -0.9858,  0.3350,  ..., -0.0051,  0.5000, -1.3818]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 20/40
+Image: 134085_1_E1_0001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Ice ring.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.3486, -0.4570,  1.2178,  ..., -0.6899, -1.5352, -0.3706]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5010, -0.4978,  1.3301,  ..., -0.3872, -1.3984, -0.3921]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.3418, -0.7827,  0.4602,  ..., -1.5137, -1.7207, -0.9360]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.1895, -0.8232,  0.5723,  ..., -1.2109, -1.5840, -0.9575]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.4502, -0.9136,  0.2803,  ..., -0.2206,  0.3831, -1.3965]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.2979, -0.9541,  0.3921,  ...,  0.0822,  0.5195, -1.4180]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 21/40
+Image: 157568_1_E2_0001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.4998, -0.5142,  1.1514,  ..., -0.6533, -1.5273, -0.3430]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.6523, -0.5547,  1.2637,  ..., -0.3506, -1.3906, -0.3645]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.2832, -0.7598,  0.4268,  ..., -1.5586, -1.8633, -0.8364]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.1309, -0.8003,  0.5386,  ..., -1.2559, -1.7266, -0.8579]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.4873, -0.8628,  0.1753,  ..., -0.3071,  0.2666, -1.5605]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.3350, -0.9033,  0.2871,  ..., -0.0044,  0.4031, -1.5820]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 22/40
+Image: 157568_2_0001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.5366, -0.5586,  1.2334,  ..., -0.6938, -1.5791, -0.3816]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.6890, -0.5991,  1.3457,  ..., -0.3911, -1.4424, -0.4031]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.4004, -0.8794,  0.3188,  ..., -1.5439, -1.7656, -0.9004]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.2480, -0.9199,  0.4307,  ..., -1.2412, -1.6289, -0.9219]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.5957, -0.8589,  0.3003,  ..., -0.2927,  0.2510, -1.5820]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.4434, -0.8994,  0.4121,  ...,  0.0100,  0.3875, -1.6035]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 23/40
+Image: 130568_2_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.3054, -0.5674,  1.0869,  ..., -0.6318, -1.5527, -0.3445]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.4578, -0.6079,  1.1992,  ..., -0.3291, -1.4160, -0.3660]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.3125, -0.8125,  0.3545,  ..., -1.5732, -1.7559, -0.8901]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.1602, -0.8530,  0.4663,  ..., -1.2705, -1.6191, -0.9116]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.6172, -0.7935,  0.2137,  ..., -0.2969,  0.3306, -1.4277]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.4648, -0.8340,  0.3257,  ...,  0.0059,  0.4670, -1.4492]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 24/40
+Image: 106264_2_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.4023, -0.5381,  1.2051,  ..., -0.7236, -1.6152, -0.3291]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5547, -0.5786,  1.3164,  ..., -0.4209, -1.4785, -0.3506]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.4395, -0.7832,  0.3616,  ..., -1.4795, -1.7627, -0.9639]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.2871, -0.8237,  0.4734,  ..., -1.1768, -1.6260, -0.9854]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.6260, -0.7817,  0.1902,  ..., -0.2200,  0.3218, -1.4756]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.4736, -0.8223,  0.3020,  ...,  0.0828,  0.4583, -1.4971]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 25/40
+Image: 151666_1_E1_0001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.3835, -0.5029,  1.1318,  ..., -0.7427, -1.5332, -0.3616]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5361, -0.5435,  1.2441,  ..., -0.4399, -1.3965, -0.3831]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.3926, -0.7725,  0.4236,  ..., -1.5469, -1.7598, -0.7837]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.2402, -0.8130,  0.5352,  ..., -1.2441, -1.6230, -0.8052]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.6396, -0.8335,  0.1663,  ..., -0.2351,  0.3093, -1.4980]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.4873, -0.8740,  0.2781,  ...,  0.0676,  0.4458, -1.5195]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 26/40
+Image: 105616_1_E1_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.3564, -0.5430,  1.1699,  ..., -0.6675, -1.5889, -0.3286]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5088, -0.5835,  1.2812,  ..., -0.3647, -1.4521, -0.3501]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.2266, -0.7363,  0.3828,  ..., -1.5195, -1.7754, -0.8740]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.0742, -0.7769,  0.4946,  ..., -1.2168, -1.6387, -0.8955]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.5811, -0.8608,  0.1473,  ..., -0.2063,  0.2896, -1.4619]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.4287, -0.9014,  0.2593,  ...,  0.0964,  0.4260, -1.4834]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 27/40
+Image: 63581_1_E1.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.2876, -0.3901,  1.1348,  ..., -0.6797, -1.4600, -0.3823]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.4399, -0.4309,  1.2461,  ..., -0.3770, -1.3232, -0.4038]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.4766, -0.6997,  0.2939,  ..., -1.3994, -1.7627, -0.9326]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.3242, -0.7402,  0.4058,  ..., -1.0967, -1.6260, -0.9541]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.6768, -0.7295,  0.3213,  ..., -0.2402,  0.3003, -1.4727]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.5244, -0.7700,  0.4331,  ...,  0.0625,  0.4368, -1.4941]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 28/40
+Image: 2557_1_E2_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.4851, -0.6211,  1.2588,  ..., -0.6128, -1.5439, -0.3740]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.6377, -0.6616,  1.3711,  ..., -0.3101, -1.4072, -0.3955]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.3555, -0.9814,  0.2822,  ..., -1.4844, -1.8057, -0.8457]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.2031, -1.0225,  0.3940,  ..., -1.1816, -1.6689, -0.8672]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.5801, -0.8604,  0.1853,  ..., -0.3438,  0.3896, -1.5312]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.4277, -0.9009,  0.2971,  ..., -0.0410,  0.5264, -1.5527]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 29/40
+Image: 38434_1_E1_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.4302, -0.5903,  1.2236,  ..., -0.6494, -1.5557, -0.3677]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5825, -0.6309,  1.3359,  ..., -0.3467, -1.4189, -0.3892]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.4023, -0.8750,  0.2910,  ..., -1.5830, -1.7812, -0.8184]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.2500, -0.9155,  0.4028,  ..., -1.2803, -1.6445, -0.8398]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.4961, -1.0029,  0.2993,  ..., -0.3728,  0.2651, -1.4482]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.3438, -1.0439,  0.4111,  ..., -0.0701,  0.4016, -1.4697]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 30/40
+Image: T3702_1_E1_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.4180, -0.6758,  1.3164,  ..., -0.6328, -1.5996, -0.3311]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5703, -0.7163,  1.4277,  ..., -0.3301, -1.4629, -0.3525]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.2891, -0.6709,  0.3760,  ..., -1.5508, -1.7607, -0.7363]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.1367, -0.7114,  0.4878,  ..., -1.2480, -1.6240, -0.7578]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.5820, -0.8862,  0.2920,  ..., -0.2361,  0.1482, -1.3145]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.4297, -0.9268,  0.4038,  ...,  0.0667,  0.2847, -1.3359]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 31/40
+Image: 157568_1_E1_0001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.5449, -0.5576,  1.2578,  ..., -0.6240, -1.5859, -0.3713]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.6973, -0.5981,  1.3691,  ..., -0.3213, -1.4492, -0.3928]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.3340, -0.8970,  0.3149,  ..., -1.6230, -1.8584, -0.8281]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.1816, -0.9375,  0.4268,  ..., -1.3203, -1.7217, -0.8496]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.5146, -0.9326,  0.2803,  ..., -0.4170,  0.2988, -1.4834]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.3623, -0.9731,  0.3921,  ..., -0.1143,  0.4353, -1.5049]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 32/40
+Image: 12996_3_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.4766, -0.5469,  1.3887,  ..., -0.6230, -1.7119, -0.3643]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.6289, -0.5874,  1.5000,  ..., -0.3203, -1.5752, -0.3857]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.3242, -0.9512,  0.2688,  ..., -1.6035, -1.6719, -0.8535]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.1719, -0.9917,  0.3806,  ..., -1.3008, -1.5352, -0.8750]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.3633, -1.0908,  0.2593,  ..., -0.2715,  0.3098, -1.4209]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.2109, -1.1318,  0.3711,  ...,  0.0312,  0.4463, -1.4424]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 33/40
+Image: 61258_1_E1_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.4033, -0.5327,  1.2021,  ..., -0.7095, -1.4814, -0.4158]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5557, -0.5732,  1.3145,  ..., -0.4067, -1.3447, -0.4373]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.3711, -0.7075,  0.3853,  ..., -1.5645, -1.8213, -0.8442]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.2188, -0.7480,  0.4971,  ..., -1.2617, -1.6846, -0.8657]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.5967, -0.8789,  0.3186,  ..., -0.3625,  0.2200, -1.4854]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.4443, -0.9194,  0.4304,  ..., -0.0598,  0.3564, -1.5068]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 34/40
+Image: 105648_1_E1_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.3630, -0.5137,  1.1719,  ..., -0.5615, -1.6221, -0.3711]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5156, -0.5542,  1.2832,  ..., -0.2588, -1.4854, -0.3926]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.2930, -0.7324,  0.4209,  ..., -1.4746, -1.8887, -0.9517]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.1406, -0.7729,  0.5327,  ..., -1.1719, -1.7520, -0.9731]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.6016, -0.8750,  0.1076,  ..., -0.1937,  0.3672, -1.5361]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.4492, -0.9155,  0.2195,  ...,  0.1090,  0.5039, -1.5576]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 35/40
+Image: 11014_2_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.4062, -0.4795,  1.2334,  ..., -0.6680, -1.5508, -0.2971]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5586, -0.5200,  1.3457,  ..., -0.3652, -1.4141, -0.3186]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.3848, -0.9238,  0.2993,  ..., -1.5684, -1.8145, -0.8921]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.2324, -0.9644,  0.4111,  ..., -1.2656, -1.6777, -0.9136]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.6172, -0.9185,  0.3442,  ..., -0.3552,  0.3555, -1.4785]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.4648, -0.9590,  0.4561,  ..., -0.0525,  0.4919, -1.5000]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 36/40
+Image: 125499_1_E1_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.2822, -0.4817,  1.1289,  ..., -0.6904, -1.5537, -0.3086]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.4346, -0.5225,  1.2402,  ..., -0.3877, -1.4170, -0.3301]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.3027, -0.7266,  0.4648,  ..., -1.4707, -1.8057, -0.9268]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.1504, -0.7671,  0.5767,  ..., -1.1680, -1.6689, -0.9482]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.6016, -0.7764,  0.2705,  ..., -0.2469,  0.3459, -1.4746]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.4492, -0.8169,  0.3823,  ...,  0.0558,  0.4824, -1.4961]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 37/40
+Image: 106264_1_E2_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.4160, -0.5234,  1.1973,  ..., -0.7212, -1.5293, -0.3616]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5684, -0.5640,  1.3086,  ..., -0.4185, -1.3926, -0.3831]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.3477, -0.7158,  0.4241,  ..., -1.5518, -1.7900, -0.7896]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.1953, -0.7563,  0.5361,  ..., -1.2490, -1.6533, -0.8110]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.6270, -0.8237,  0.2852,  ..., -0.3523,  0.2341, -1.4785]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.4746, -0.8643,  0.3970,  ..., -0.0496,  0.3706, -1.5000]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 38/40
+Image: 117317_1_E2_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.3040, -0.5156,  1.1582,  ..., -0.6919, -1.5449, -0.3733]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.4563, -0.5562,  1.2695,  ..., -0.3892, -1.4082, -0.3948]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.2520, -0.6909,  0.3774,  ..., -1.4609, -1.7812, -0.8423]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.0996, -0.7314,  0.4893,  ..., -1.1582, -1.6445, -0.8638]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.6279, -0.7373,  0.3682,  ..., -0.1938,  0.2803, -1.4160]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.4756, -0.7778,  0.4800,  ...,  0.1089,  0.4167, -1.4375]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 39/40
+Image: 65158_1_E1.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.2603, -0.5723,  1.1836,  ..., -0.6787, -1.6641, -0.2859]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.4126, -0.6128,  1.2949,  ..., -0.3760, -1.5273, -0.3074]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.4570, -0.6885,  0.4502,  ..., -1.5078, -1.7246, -0.8994]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.3047, -0.7290,  0.5620,  ..., -1.2051, -1.5879, -0.9209]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.7295, -0.8062,  0.2219,  ..., -0.2690,  0.2908, -1.4775]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.5771, -0.8467,  0.3337,  ...,  0.0337,  0.4272, -1.4990]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 40/40
+Image: 165065_3_0001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH COMPOSITE STEERING (Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Composite steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Composite steering applied at generation step 0
+  Original activation: tensor([[ 0.3364, -0.5166,  1.1172,  ..., -0.7207, -1.5371, -0.3049]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.4888, -0.5571,  1.2285,  ..., -0.4180, -1.4004, -0.3264]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Composite steering applied at generation step 1
+  Original activation: tensor([[-2.3574, -0.7080,  0.3418,  ..., -1.4951, -1.8047, -0.8848]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.2051, -0.7485,  0.4536,  ..., -1.1924, -1.6680, -0.9062]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Composite steering applied at generation step 2
+  Original activation: tensor([[-1.6143, -0.8091,  0.1941,  ..., -0.2644,  0.2456, -1.4609]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.4619, -0.8496,  0.3059,  ...,  0.0383,  0.3821, -1.4824]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+Results saved to ./Composite_steering_CAA_generation_results_layer_16_artifact.csv
+Processed 40 items successfully with composite steering

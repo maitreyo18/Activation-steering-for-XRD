@@ -1,0 +1,2 @@
+Anomaly, alpha, vector, layer
+Non-uniform detector, 1.5, No_anomalies, 20

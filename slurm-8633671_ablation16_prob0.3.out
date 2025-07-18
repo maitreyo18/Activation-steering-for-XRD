@@ -1,0 +1,714 @@
+Thu May 29 01:22:30 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla V100-PCIE-32GB           On  |   00000000:AF:00.0 Off |                    0 |
+| N/A   28C    P0             24W /  250W |       1MiB /  32768MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+/depot/amannodi/apps/ASTRA/envs/astra/lib/python3.10/site-packages/transformers/utils/hub.py:127: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+[nltk_data] Downloading package punkt to /home/biswasm/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/eva_vit.py:433: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(cached_file, map_location="cpu")
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:77: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(cached_file, map_location="cpu")
+You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama.LlamaTokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565 - if you loaded a llama tokenizer from a GGUF file you can ignore this message
+The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+Loading VIT
+Loading VIT Done
+Loading Q-Former
+Loading Q-Former Done
+Loading LLAMA
+Downloading shards:   0%|          | 0/3 [00:00<?, ?it/s]Downloading shards: 100%|██████████| 3/3 [00:00<00:00, 57.24it/s]
+/depot/amannodi/apps/ASTRA/envs/astra/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:519: UserWarning: `pad_token_id` should be positive but got -1. This will cause errors when batch generating, if there is padding. Please set `pad_token_id` explicitly by `model.generation_config.pad_token_id=PAD_TOKEN_ID` to avoid errors in generation, and ensure your `input_ids` input does not have negative values.
+  warnings.warn(
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:21<00:43, 21.59s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:40<00:19, 19.93s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:51<00:00, 15.95s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:51<00:00, 17.19s/it]
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/mini_gpt4.py:274: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(ckpt_path, map_location="cpu")
+You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama_fast.LlamaTokenizerFast'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565 - if you loaded a llama tokenizer from a GGUF file you can ignore this message.
+Loading LLAMA Done
+Load BLIP2-LLM Checkpoint: ckpts/pretrained_minigpt4.pth
+[Initialization Finished]
+
+
+Processing image: image_1.png
+Prompt: This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. ice ring, artifact and diffuse scattering
+B. non-uniform detector and background ring
+C. strong background
+D. loop scattering
+Correct answer: C. strong background
+Attributed: C. strong background
+0it [00:00, ?it/s]/scratch/gilbreth/biswasm/ASTRA_updated/image_attr/utils.py:192: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with ch.no_grad(), ch.cuda.amp.autocast():
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:41: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  return torch.cuda.amp.autocast(dtype=dtype)
+1it [00:11, 11.65s/it]2it [00:17,  8.38s/it]3it [00:23,  7.32s/it]4it [00:29,  6.83s/it]5it [00:35,  6.55s/it]6it [00:42,  6.39s/it]7it [00:48,  6.28s/it]8it [00:54,  6.21s/it]9it [01:00,  6.17s/it]10it [01:06,  6.14s/it]11it [01:12,  6.12s/it]12it [01:18,  6.11s/it]13it [01:24,  6.09s/it]14it [01:30,  6.08s/it]15it [01:36,  6.08s/it]16it [01:42,  6.08s/it]16it [01:42,  6.42s/it]
+Scores of the top 15 features:
+0.12863763071441936
+0.11463966965675354
+0.0573144831017136
+0.04148974030229617
+0.029669115732068842
+0.020806297659873962
+0.008776464831047217
+-0.0
+0.0
+0.0
+-0.0
+-0.0
+0.0
+0.0
+-0.0
+Number of attributed indices: 7
+Saved original image, attribution, and mask for image image_1.png at index 0.
+
+Processing image: image_2.png
+Prompt: This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. loop scattering
+B. background ring and artifact
+C. non-uniform detector and strong background
+D. ice ring
+Correct answer: C. non-uniform detector and strong background
+Attributed: C. non-uniform detector and strong background
+0it [00:00, ?it/s]/scratch/gilbreth/biswasm/ASTRA_updated/image_attr/utils.py:192: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with ch.no_grad(), ch.cuda.amp.autocast():
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:41: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  return torch.cuda.amp.autocast(dtype=dtype)
+1it [00:06,  6.07s/it]2it [00:12,  6.07s/it]3it [00:18,  6.07s/it]4it [00:24,  6.07s/it]5it [00:30,  6.07s/it]6it [00:36,  6.07s/it]7it [00:42,  6.07s/it]8it [00:48,  6.07s/it]9it [00:54,  6.07s/it]10it [01:00,  6.07s/it]11it [01:06,  6.07s/it]12it [01:12,  6.07s/it]13it [01:18,  6.07s/it]14it [01:24,  6.07s/it]15it [01:31,  6.07s/it]16it [01:37,  6.07s/it]16it [01:37,  6.07s/it]
+Scores of the top 15 features:
+0.04625553991574183
+0.0
+0.0
+0.0
+0.0
+-0.0
+0.0
+-0.0
+0.0
+0.0
+0.0
+-0.0
+-0.0
+0.0
+-0.0
+Number of attributed indices: 1
+Saved original image, attribution, and mask for image image_2.png at index 1.
+
+Processing image: image_3.png
+Prompt: This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. strong background and ice ring
+B. strong background and ice ring
+C. ice ring and strong background
+D. background ring, diffuse scattering, loop scattering, non-uniform detector and artifact
+Correct answer: D. background ring, diffuse scattering, loop scattering, non-uniform detector and artifact
+Attributed: D. background ring, diffuse scattering, loop scattering, non-uniform detector and artifact
+0it [00:00, ?it/s]/scratch/gilbreth/biswasm/ASTRA_updated/image_attr/utils.py:192: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with ch.no_grad(), ch.cuda.amp.autocast():
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:41: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  return torch.cuda.amp.autocast(dtype=dtype)
+1it [00:06,  6.06s/it]2it [00:12,  6.06s/it]3it [00:18,  6.06s/it]4it [00:24,  6.06s/it]5it [00:30,  6.06s/it]6it [00:36,  6.07s/it]7it [00:42,  6.07s/it]8it [00:48,  6.07s/it]9it [00:54,  6.06s/it]10it [01:00,  6.06s/it]11it [01:06,  6.06s/it]12it [01:12,  6.06s/it]13it [01:18,  6.07s/it]14it [01:24,  6.06s/it]15it [01:30,  6.08s/it]16it [01:37,  6.08s/it]16it [01:37,  6.07s/it]
+Scores of the top 15 features:
+-0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+-0.0
+-0.0
+0.0
+-0.0
+-0.0
+-0.0
+-0.0
+0.0
+0.0
+Number of attributed indices: 0
+
+Processing image: image_4.png
+Prompt: This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. artifact and diffuse scattering
+B. strong background
+C. loop scattering and ice ring
+D. background ring and non-uniform detector
+Correct answer: D. background ring and non-uniform detector
+Attributed: D. background ring and non-uniform detector
+0it [00:00, ?it/s]/scratch/gilbreth/biswasm/ASTRA_updated/image_attr/utils.py:192: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with ch.no_grad(), ch.cuda.amp.autocast():
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:41: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  return torch.cuda.amp.autocast(dtype=dtype)
+1it [00:06,  6.08s/it]2it [00:12,  6.09s/it]3it [00:18,  6.08s/it]4it [00:24,  6.09s/it]5it [00:30,  6.15s/it]6it [00:36,  6.17s/it]7it [00:42,  6.14s/it]8it [00:48,  6.12s/it]9it [00:55,  6.11s/it]10it [01:01,  6.10s/it]11it [01:07,  6.09s/it]12it [01:13,  6.08s/it]13it [01:19,  6.08s/it]14it [01:25,  6.08s/it]15it [01:31,  6.07s/it]16it [01:37,  6.07s/it]16it [01:37,  6.10s/it]
+Scores of the top 15 features:
+-0.0
+0.0
+0.0
+0.0
+-0.0
+0.0
+-0.0
+0.0
+0.0
+0.0
+-0.0
+-0.0
+0.0
+0.0
+0.0
+Number of attributed indices: 0
+
+Processing image: image_5.png
+Prompt: This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. loop scattering and non-uniform detector
+B. strong background
+C. background ring
+D. artifact
+Correct answer: C. background ring
+Attributed: C. background ring
+0it [00:00, ?it/s]/scratch/gilbreth/biswasm/ASTRA_updated/image_attr/utils.py:192: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with ch.no_grad(), ch.cuda.amp.autocast():
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:41: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  return torch.cuda.amp.autocast(dtype=dtype)
+1it [00:06,  6.07s/it]2it [00:12,  6.08s/it]3it [00:18,  6.08s/it]4it [00:24,  6.07s/it]5it [00:30,  6.07s/it]6it [00:36,  6.07s/it]7it [00:42,  6.07s/it]8it [00:48,  6.07s/it]9it [00:54,  6.07s/it]10it [01:00,  6.07s/it]11it [01:06,  6.07s/it]12it [01:12,  6.07s/it]13it [01:18,  6.07s/it]14it [01:25,  6.07s/it]15it [01:31,  6.07s/it]16it [01:37,  6.07s/it]16it [01:37,  6.07s/it]
+Scores of the top 15 features:
+0.060182499837901395
+0.004682874507911195
+0.0
+-0.0
+-0.0
+0.0
+0.0
+-0.0
+0.0
+-0.0
+0.0
+0.0
+-0.0
+0.0
+-0.022038012566790718
+Number of attributed indices: 2
+Saved original image, attribution, and mask for image image_5.png at index 4.
+
+Processing image: image_6.png
+Prompt: This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. diffuse scattering and ice ring
+B. ice ring and diffuse scattering
+C. background ring, loop scattering, non-uniform detector, strong background and artifact
+D. diffuse scattering and ice ring
+Correct answer: C. background ring, loop scattering, non-uniform detector, strong background and artifact
+Attributed: C. background ring, loop scattering, non-uniform detector, strong background and artifact
+0it [00:00, ?it/s]/scratch/gilbreth/biswasm/ASTRA_updated/image_attr/utils.py:192: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with ch.no_grad(), ch.cuda.amp.autocast():
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:41: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  return torch.cuda.amp.autocast(dtype=dtype)
+1it [00:06,  6.05s/it]2it [00:12,  6.06s/it]3it [00:18,  6.06s/it]4it [00:24,  6.06s/it]5it [00:30,  6.06s/it]6it [00:36,  6.06s/it]7it [00:42,  6.06s/it]8it [00:48,  6.06s/it]9it [00:54,  6.06s/it]10it [01:00,  6.06s/it]11it [01:06,  6.06s/it]12it [01:12,  6.06s/it]13it [01:18,  6.06s/it]14it [01:24,  6.06s/it]15it [01:30,  6.06s/it]16it [01:36,  6.06s/it]16it [01:36,  6.06s/it]
+Scores of the top 15 features:
+-0.0
+-0.0
+0.0
+0.0
+-0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+-0.0
+0.0
+0.0
+0.0
+Number of attributed indices: 0
+
+Processing image: image_7.png
+Prompt: This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. strong background
+B. diffuse scattering and background ring
+C. non-uniform detector
+D. loop scattering, ice ring and artifact
+Correct answer: A. strong background
+Attributed: A. strong background
+0it [00:00, ?it/s]/scratch/gilbreth/biswasm/ASTRA_updated/image_attr/utils.py:192: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with ch.no_grad(), ch.cuda.amp.autocast():
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:41: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  return torch.cuda.amp.autocast(dtype=dtype)
+1it [00:06,  6.07s/it]2it [00:12,  6.08s/it]3it [00:18,  6.08s/it]4it [00:24,  6.07s/it]5it [00:30,  6.07s/it]6it [00:36,  6.07s/it]7it [00:42,  6.07s/it]8it [00:48,  6.07s/it]9it [00:54,  6.07s/it]10it [01:00,  6.07s/it]11it [01:06,  6.07s/it]12it [01:12,  6.07s/it]13it [01:18,  6.07s/it]14it [01:24,  6.07s/it]15it [01:31,  6.07s/it]16it [01:37,  6.07s/it]16it [01:37,  6.07s/it]
+Scores of the top 15 features:
+0.1270585677323032
+0.12065466311851337
+0.07626338956663328
+0.07062880654834491
+0.026545082610530093
+0.01907431334257126
+0.003037103346969124
+0.0
+0.0
+0.0
+-0.0
+0.0
+0.0
+0.0
+0.0
+Number of attributed indices: 7
+Saved original image, attribution, and mask for image image_7.png at index 6.
+
+Processing image: image_8.png
+Prompt: This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. loop scattering
+B. background ring and non-uniform detector
+C. strong background, diffuse scattering and artifact
+D. ice ring
+Correct answer: B. background ring and non-uniform detector
+Attributed: B. background ring and non-uniform detector
+0it [00:00, ?it/s]/scratch/gilbreth/biswasm/ASTRA_updated/image_attr/utils.py:192: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with ch.no_grad(), ch.cuda.amp.autocast():
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:41: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  return torch.cuda.amp.autocast(dtype=dtype)
+1it [00:06,  6.07s/it]2it [00:12,  6.07s/it]3it [00:18,  6.07s/it]4it [00:24,  6.07s/it]5it [00:30,  6.07s/it]6it [00:36,  6.07s/it]7it [00:42,  6.07s/it]8it [00:48,  6.07s/it]9it [00:54,  6.07s/it]10it [01:00,  6.07s/it]11it [01:06,  6.08s/it]12it [01:12,  6.07s/it]13it [01:18,  6.08s/it]14it [01:25,  6.07s/it]15it [01:31,  6.07s/it]16it [01:37,  6.07s/it]16it [01:37,  6.07s/it]
+Scores of the top 15 features:
+0.0
+0.0
+0.0
+-0.0
+-0.0
+0.0
+0.0
+0.0
+-0.0
+0.0
+-0.0
+-0.0
+0.0
+-0.0
+-0.0
+Number of attributed indices: 0
+
+Processing image: image_9.png
+Prompt: This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. diffuse scattering, loop scattering and non-uniform detector
+B. ice ring
+C. loop scattering
+D. background ring, strong background and artifact
+Correct answer: D. background ring, strong background and artifact
+Attributed: D. background ring, strong background and artifact
+0it [00:00, ?it/s]/scratch/gilbreth/biswasm/ASTRA_updated/image_attr/utils.py:192: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with ch.no_grad(), ch.cuda.amp.autocast():
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:41: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  return torch.cuda.amp.autocast(dtype=dtype)
+1it [00:06,  6.07s/it]2it [00:12,  6.07s/it]3it [00:18,  6.07s/it]4it [00:24,  6.07s/it]5it [00:30,  6.07s/it]6it [00:36,  6.07s/it]7it [00:42,  6.07s/it]8it [00:48,  6.07s/it]9it [00:54,  6.07s/it]10it [01:00,  6.07s/it]11it [01:06,  6.07s/it]12it [01:12,  6.07s/it]13it [01:18,  6.07s/it]14it [01:25,  6.07s/it]15it [01:31,  6.07s/it]16it [01:37,  6.08s/it]16it [01:37,  6.08s/it]
+Scores of the top 15 features:
+0.09117080472042853
+0.06997492572848125
+0.024663464219160366
+0.0
+0.0
+-0.0
+-0.0
+0.0
+-0.0
+-0.0
+0.0
+0.0
+-0.033120567482044574
+-0.04860527914272792
+-0.14027785845155222
+Number of attributed indices: 3
+Saved original image, attribution, and mask for image image_9.png at index 8.
+
+Processing image: image_10.png
+Prompt: This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. artifact
+B. ice ring and diffuse scattering
+C. background ring and non-uniform detector
+D. strong background
+Correct answer: C. background ring and non-uniform detector
+Attributed: C. background ring and non-uniform detector
+0it [00:00, ?it/s]/scratch/gilbreth/biswasm/ASTRA_updated/image_attr/utils.py:192: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with ch.no_grad(), ch.cuda.amp.autocast():
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:41: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  return torch.cuda.amp.autocast(dtype=dtype)
+1it [00:06,  6.07s/it]2it [00:12,  6.07s/it]3it [00:18,  6.07s/it]4it [00:24,  6.08s/it]5it [00:30,  6.08s/it]6it [00:36,  6.08s/it]7it [00:42,  6.08s/it]8it [00:48,  6.08s/it]9it [00:54,  6.08s/it]10it [01:00,  6.07s/it]11it [01:06,  6.07s/it]12it [01:12,  6.07s/it]13it [01:18,  6.07s/it]14it [01:25,  6.08s/it]15it [01:31,  6.08s/it]16it [01:37,  6.07s/it]16it [01:37,  6.08s/it]
+Scores of the top 15 features:
+-0.0
+-0.0
+0.0
+0.0
+-0.0
+-0.0
+-0.0
+-0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+-0.0
+Number of attributed indices: 0
+
+Processing image: image_11.png
+Prompt: This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. strong background, diffuse scattering and ice ring
+B. background ring
+C. loop scattering, artifact and non-uniform detector
+D. diffuse scattering, ice ring and artifact
+Correct answer: B. background ring
+Attributed: B. background ring
+0it [00:00, ?it/s]/scratch/gilbreth/biswasm/ASTRA_updated/image_attr/utils.py:192: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with ch.no_grad(), ch.cuda.amp.autocast():
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:41: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  return torch.cuda.amp.autocast(dtype=dtype)
+1it [00:06,  6.07s/it]2it [00:12,  6.07s/it]3it [00:18,  6.07s/it]4it [00:24,  6.07s/it]5it [00:30,  6.07s/it]6it [00:36,  6.07s/it]7it [00:42,  6.07s/it]8it [00:48,  6.07s/it]9it [00:54,  6.07s/it]10it [01:00,  6.07s/it]11it [01:06,  6.07s/it]12it [01:12,  6.07s/it]13it [01:18,  6.07s/it]14it [01:24,  6.07s/it]15it [01:31,  6.07s/it]16it [01:37,  6.07s/it]16it [01:37,  6.07s/it]
+Scores of the top 15 features:
+0.05700099472208956
+0.040814057367999076
+-0.0
+-0.0
+-0.0
+-0.0
+-0.0
+-0.0
+-0.0
+-0.0
+0.0
+-0.0
+-0.0
+0.0
+0.0
+Number of attributed indices: 2
+Saved original image, attribution, and mask for image image_11.png at index 10.
+
+Processing image: image_12.png
+Prompt: This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. ice ring
+B. diffuse scattering
+C. background ring, loop scattering, non-uniform detector, strong background and artifact
+D. ice ring
+Correct answer: C. background ring, loop scattering, non-uniform detector, strong background and artifact
+Attributed: C. background ring, loop scattering, non-uniform detector, strong background and artifact
+0it [00:00, ?it/s]/scratch/gilbreth/biswasm/ASTRA_updated/image_attr/utils.py:192: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with ch.no_grad(), ch.cuda.amp.autocast():
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:41: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  return torch.cuda.amp.autocast(dtype=dtype)
+1it [00:06,  6.07s/it]2it [00:12,  6.07s/it]3it [00:18,  6.07s/it]4it [00:24,  6.07s/it]5it [00:30,  6.07s/it]6it [00:36,  6.07s/it]7it [00:42,  6.07s/it]8it [00:48,  6.07s/it]9it [00:54,  6.07s/it]10it [01:00,  6.08s/it]11it [01:06,  6.08s/it]12it [01:12,  6.07s/it]13it [01:18,  6.08s/it]14it [01:25,  6.08s/it]15it [01:31,  6.07s/it]16it [01:37,  6.07s/it]16it [01:37,  6.07s/it]
+Scores of the top 15 features:
+-0.0
+0.0
+0.0
+0.0
+-0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+-0.0
+0.0
+0.0
+0.0
+Number of attributed indices: 0
+
+Processing image: image_13.png
+Prompt: This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. artifact, diffuse scattering and strong background
+B. background ring, loop scattering and non-uniform detector
+C. ice ring
+D. strong background
+Correct answer: B. background ring, loop scattering and non-uniform detector
+Attributed: B. background ring, loop scattering and non-uniform detector
+0it [00:00, ?it/s]/scratch/gilbreth/biswasm/ASTRA_updated/image_attr/utils.py:192: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with ch.no_grad(), ch.cuda.amp.autocast():
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:41: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  return torch.cuda.amp.autocast(dtype=dtype)
+1it [00:06,  6.07s/it]2it [00:12,  6.07s/it]3it [00:18,  6.10s/it]4it [00:24,  6.09s/it]5it [00:30,  6.09s/it]6it [00:36,  6.09s/it]7it [00:42,  6.08s/it]8it [00:48,  6.08s/it]9it [00:54,  6.08s/it]10it [01:00,  6.07s/it]11it [01:06,  6.07s/it]12it [01:12,  6.08s/it]13it [01:19,  6.08s/it]14it [01:25,  6.08s/it]15it [01:31,  6.08s/it]16it [01:37,  6.08s/it]16it [01:37,  6.08s/it]
+Scores of the top 15 features:
+-0.0
+-0.0
+0.0
+0.0
+-0.0
+0.0
+0.0
+0.0
+-0.0
+0.0
+0.0
+-0.0
+-0.0
+-0.0
+-0.0
+Number of attributed indices: 0
+
+Processing image: image_14.png
+Prompt: This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. loop scattering and diffuse scattering
+B. artifact and ice ring
+C. non-uniform detector
+D. background ring and strong background
+Correct answer: D. background ring and strong background
+Attributed: D. background ring and strong background
+0it [00:00, ?it/s]/scratch/gilbreth/biswasm/ASTRA_updated/image_attr/utils.py:192: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with ch.no_grad(), ch.cuda.amp.autocast():
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:41: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  return torch.cuda.amp.autocast(dtype=dtype)
+1it [00:06,  6.07s/it]2it [00:12,  6.07s/it]3it [00:18,  6.07s/it]4it [00:24,  6.07s/it]5it [00:30,  6.07s/it]6it [00:36,  6.07s/it]7it [00:42,  6.07s/it]8it [00:48,  6.07s/it]9it [00:54,  6.07s/it]10it [01:00,  6.07s/it]11it [01:06,  6.07s/it]12it [01:12,  6.07s/it]13it [01:18,  6.07s/it]14it [01:24,  6.07s/it]15it [01:31,  6.07s/it]16it [01:37,  6.07s/it]16it [01:37,  6.07s/it]
+Scores of the top 15 features:
+0.01170421088612915
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+-0.0
+0.0
+-0.0
+-0.00937405507590294
+Number of attributed indices: 1
+Saved original image, attribution, and mask for image image_14.png at index 13.
+
+Processing image: image_15.png
+Prompt: This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. strong background, artifact and ice ring
+B. background ring and non-uniform detector
+C. diffuse scattering
+D. loop scattering
+Correct answer: B. background ring and non-uniform detector
+Attributed: B. background ring and non-uniform detector
+0it [00:00, ?it/s]/scratch/gilbreth/biswasm/ASTRA_updated/image_attr/utils.py:192: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with ch.no_grad(), ch.cuda.amp.autocast():
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:41: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  return torch.cuda.amp.autocast(dtype=dtype)
+1it [00:06,  6.07s/it]2it [00:12,  6.07s/it]3it [00:18,  6.08s/it]4it [00:24,  6.07s/it]5it [00:30,  6.07s/it]6it [00:36,  6.07s/it]7it [00:42,  6.07s/it]8it [00:48,  6.08s/it]9it [00:54,  6.08s/it]10it [01:00,  6.08s/it]11it [01:06,  6.08s/it]12it [01:12,  6.08s/it]13it [01:18,  6.08s/it]14it [01:25,  6.07s/it]15it [01:31,  6.07s/it]16it [01:37,  6.07s/it]16it [01:37,  6.07s/it]
+Scores of the top 15 features:
+-0.0
+0.0
+-0.0
+0.0
+-0.0
+0.0
+-0.0
+-0.0
+-0.0
+0.0
+-0.0
+-0.0
+-0.0
+-0.0
+-0.0
+Number of attributed indices: 0
+
+Processing image: image_16.png
+Prompt: This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. diffuse scattering
+B. strong background, loop scattering and non-uniform detector
+C. background ring and artifact
+D. ice ring
+Correct answer: C. background ring and artifact
+Attributed: C. background ring and artifact
+0it [00:00, ?it/s]/scratch/gilbreth/biswasm/ASTRA_updated/image_attr/utils.py:192: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with ch.no_grad(), ch.cuda.amp.autocast():
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:41: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  return torch.cuda.amp.autocast(dtype=dtype)
+1it [00:06,  6.09s/it]2it [00:12,  6.09s/it]3it [00:18,  6.09s/it]4it [00:24,  6.08s/it]5it [00:30,  6.09s/it]6it [00:36,  6.08s/it]7it [00:42,  6.08s/it]8it [00:48,  6.08s/it]9it [00:54,  6.08s/it]10it [01:00,  6.08s/it]11it [01:06,  6.08s/it]12it [01:12,  6.08s/it]13it [01:19,  6.07s/it]14it [01:25,  6.08s/it]15it [01:31,  6.08s/it]16it [01:37,  6.07s/it]16it [01:37,  6.08s/it]
+Scores of the top 15 features:
+0.0
+0.0
+0.0
+-0.0
+-0.0
+0.0
+0.0
+0.0
+0.0
+-0.0
+-0.0
+-0.0
+-0.0
+-0.0
+-0.0
+Number of attributed indices: 0
+
+Processing image: image_17.png
+Prompt: This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. ice ring
+B. non-uniform detector, diffuse scattering and strong background
+C. background ring and loop scattering
+D. artifact
+Correct answer: C. background ring and loop scattering
+Attributed: C. background ring and loop scattering
+0it [00:00, ?it/s]/scratch/gilbreth/biswasm/ASTRA_updated/image_attr/utils.py:192: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with ch.no_grad(), ch.cuda.amp.autocast():
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:41: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  return torch.cuda.amp.autocast(dtype=dtype)
+1it [00:06,  6.09s/it]2it [00:12,  6.09s/it]3it [00:18,  6.09s/it]4it [00:24,  6.09s/it]5it [00:30,  6.09s/it]6it [00:36,  6.08s/it]7it [00:42,  6.09s/it]8it [00:48,  6.09s/it]9it [00:54,  6.09s/it]10it [01:00,  6.09s/it]11it [01:06,  6.09s/it]12it [01:13,  6.09s/it]13it [01:19,  6.09s/it]14it [01:25,  6.09s/it]15it [01:31,  6.09s/it]16it [01:37,  6.09s/it]16it [01:37,  6.09s/it]
+Scores of the top 15 features:
+0.06828778982162476
+0.04446013271808624
+0.01724941065984964
+-0.0
+-0.0
+0.0
+-0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+-0.0
+-0.0
+0.0
+Number of attributed indices: 3
+Saved original image, attribution, and mask for image image_17.png at index 16.
+
+Processing image: image_18.png
+Prompt: This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. background ring, loop scattering and artifact
+B. ice ring and diffuse scattering
+C. loop scattering, artifact and ice ring
+D. non-uniform detector and strong background
+Correct answer: D. non-uniform detector and strong background
+Attributed: D. non-uniform detector and strong background
+0it [00:00, ?it/s]/scratch/gilbreth/biswasm/ASTRA_updated/image_attr/utils.py:192: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with ch.no_grad(), ch.cuda.amp.autocast():
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:41: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  return torch.cuda.amp.autocast(dtype=dtype)
+1it [00:06,  6.08s/it]2it [00:12,  6.08s/it]3it [00:18,  6.07s/it]4it [00:24,  6.07s/it]5it [00:30,  6.07s/it]6it [00:36,  6.08s/it]7it [00:42,  6.08s/it]8it [00:48,  6.07s/it]9it [00:54,  6.07s/it]10it [01:00,  6.07s/it]11it [01:06,  6.07s/it]12it [01:12,  6.07s/it]13it [01:18,  6.07s/it]14it [01:25,  6.07s/it]15it [01:31,  6.08s/it]16it [01:37,  6.08s/it]16it [01:37,  6.07s/it]
+Scores of the top 15 features:
+-0.0
+0.0
+0.0
+0.0
+-0.0
+0.0
+-0.0
+0.0
+0.0
+0.0
+-0.0
+-0.0
+0.0
+0.0
+-0.0
+Number of attributed indices: 0
+
+Processing image: image_19.png
+Prompt: This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. background ring and strong background
+B. non-uniform detector
+C. loop scattering, artifact and ice ring
+D. diffuse scattering
+Correct answer: A. background ring and strong background
+Attributed: A. background ring and strong background
+0it [00:00, ?it/s]/scratch/gilbreth/biswasm/ASTRA_updated/image_attr/utils.py:192: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with ch.no_grad(), ch.cuda.amp.autocast():
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:41: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  return torch.cuda.amp.autocast(dtype=dtype)
+1it [00:06,  6.07s/it]2it [00:12,  6.07s/it]3it [00:18,  6.07s/it]4it [00:24,  6.07s/it]5it [00:30,  6.07s/it]6it [00:36,  6.07s/it]7it [00:42,  6.07s/it]8it [00:48,  6.08s/it]9it [00:54,  6.08s/it]10it [01:00,  6.08s/it]11it [01:06,  6.07s/it]12it [01:12,  6.07s/it]13it [01:18,  6.07s/it]14it [01:25,  6.07s/it]15it [01:31,  6.07s/it]16it [01:37,  6.07s/it]16it [01:37,  6.07s/it]
+Scores of the top 15 features:
+0.10791349799591646
+0.03937189651699581
+0.027328254011350812
+0.0
+0.0
+-0.0
+0.0
+-0.0
+0.0
+0.0
+-0.0
+0.0
+-0.0
+0.0
+0.0
+Number of attributed indices: 3
+Saved original image, attribution, and mask for image image_19.png at index 18.
+
+Processing image: image_20.png
+Prompt: This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. diffuse scattering, non-uniform detector and artifact
+B. strong background
+C. ice ring
+D. background ring and loop scattering
+Correct answer: D. background ring and loop scattering
+Attributed: D. background ring and loop scattering
+0it [00:00, ?it/s]/scratch/gilbreth/biswasm/ASTRA_updated/image_attr/utils.py:192: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with ch.no_grad(), ch.cuda.amp.autocast():
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:41: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  return torch.cuda.amp.autocast(dtype=dtype)
+1it [00:06,  6.08s/it]2it [00:12,  6.08s/it]3it [00:18,  6.07s/it]4it [00:24,  6.07s/it]5it [00:30,  6.08s/it]6it [00:36,  6.07s/it]7it [00:42,  6.07s/it]8it [00:48,  6.07s/it]9it [00:54,  6.07s/it]10it [01:00,  6.07s/it]11it [01:06,  6.07s/it]12it [01:12,  6.07s/it]13it [01:18,  6.07s/it]14it [01:25,  6.07s/it]15it [01:31,  6.07s/it]16it [01:37,  6.07s/it]16it [01:37,  6.07s/it]
+Scores of the top 15 features:
+0.01253445159168191
+0.0
+-0.0
+0.0
+0.0
+-0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+Number of attributed indices: 1
+Saved original image, attribution, and mask for image image_20.png at index 19.
+/depot/amannodi/apps/ASTRA/envs/astra/lib/python3.10/site-packages/transformers/utils/hub.py:127: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/eva_vit.py:433: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(cached_file, map_location="cpu")
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:77: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(cached_file, map_location="cpu")
+You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama.LlamaTokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565 - if you loaded a llama tokenizer from a GGUF file you can ignore this message
+The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+Loading VIT
+Loading VIT Done
+Loading Q-Former
+Loading Q-Former Done
+Loading LLAMA
+Downloading shards:   0%|          | 0/3 [00:00<?, ?it/s]Downloading shards: 100%|██████████| 3/3 [00:00<00:00, 1260.81it/s]
+/depot/amannodi/apps/ASTRA/envs/astra/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:519: UserWarning: `pad_token_id` should be positive but got -1. This will cause errors when batch generating, if there is padding. Please set `pad_token_id` explicitly by `model.generation_config.pad_token_id=PAD_TOKEN_ID` to avoid errors in generation, and ensure your `input_ids` input does not have negative values.
+  warnings.warn(
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:04<00:09,  4.83s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:09<00:04,  4.75s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:12<00:00,  3.94s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:12<00:00,  4.17s/it]
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/mini_gpt4.py:274: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(ckpt_path, map_location="cpu")
+/scratch/gilbreth/biswasm/ASTRA_updated/./extract_act/extracting_activations_minigpt_desc.py:94: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.no_grad(), torch.cuda.amp.autocast():
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:41: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  return torch.cuda.amp.autocast(dtype=dtype)
+Loading LLAMA Done
+Load BLIP2-LLM Checkpoint: ckpts/pretrained_minigpt4.pth
+[Initialization Finished]
+
+Warning: Could not load images for index 2: [Errno 2] No such file or directory: '/scratch/gilbreth/biswasm/ASTRA_updated/results/adv_img_attr/minigpt_desc/constrain_16/img2.bmp'
+Warning: Could not load images for index 3: [Errno 2] No such file or directory: '/scratch/gilbreth/biswasm/ASTRA_updated/results/adv_img_attr/minigpt_desc/constrain_16/img3.bmp'
+Warning: Could not load images for index 5: [Errno 2] No such file or directory: '/scratch/gilbreth/biswasm/ASTRA_updated/results/adv_img_attr/minigpt_desc/constrain_16/img5.bmp'
+Warning: Could not load images for index 7: [Errno 2] No such file or directory: '/scratch/gilbreth/biswasm/ASTRA_updated/results/adv_img_attr/minigpt_desc/constrain_16/img7.bmp'
+Warning: Could not load images for index 9: [Errno 2] No such file or directory: '/scratch/gilbreth/biswasm/ASTRA_updated/results/adv_img_attr/minigpt_desc/constrain_16/img9.bmp'
+Loaded 5 image sets
+Processing image set 0
+Processing image set 1
+Processing image set 2
+Processing image set 3
+Processing image set 4

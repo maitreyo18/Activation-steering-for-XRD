@@ -1,0 +1,770 @@
+Wed Jul 16 22:20:41 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          On  |   00000000:21:00.0 Off |                    0 |
+| N/A   29C    P0             41W /  300W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA A100 80GB PCIe          On  |   00000000:81:00.0 Off |                    0 |
+| N/A   27C    P0             43W /  300W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Wed Jul 16 22:20:42 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          On  |   00000000:21:00.0 Off |                    0 |
+| N/A   29C    P0             61W /  300W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+|   1  NVIDIA A100 80GB PCIe          On  |   00000000:81:00.0 Off |                    0 |
+| N/A   28C    P0             60W /  300W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+/depot/amannodi/apps/ASTRA/envs/astra_minigpt/lib/python3.10/site-packages/transformers/utils/hub.py:127: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/eva_vit.py:433: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(cached_file, map_location="cpu")
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:77: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(cached_file, map_location="cpu")
+You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama.LlamaTokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565 - if you loaded a llama tokenizer from a GGUF file you can ignore this message
+The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+=== CAA Generation with Continuous Steering (Batch Mode) ===
+CSV File: ./test_generate_strong_bg.csv
+Image Directory: ../datasets/XRD_data/one_correct/strong_background
+Alpha: 1.2, Layer: 16
+Loading VIT
+Loading VIT Done
+Loading Q-Former
+Loading Q-Former Done
+Loading LLAMA
+Downloading shards:   0%|          | 0/3 [00:00<?, ?it/s]Downloading shards: 100%|██████████| 3/3 [00:00<00:00, 66.73it/s]
+/depot/amannodi/apps/ASTRA/envs/astra_minigpt/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:519: UserWarning: `pad_token_id` should be positive but got -1. This will cause errors when batch generating, if there is padding. Please set `pad_token_id` explicitly by `model.generation_config.pad_token_id=PAD_TOKEN_ID` to avoid errors in generation, and ensure your `input_ids` input does not have negative values.
+  warnings.warn(
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:22<00:45, 22.66s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:45<00:22, 22.73s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:59<00:00, 18.66s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:59<00:00, 19.75s/it]
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/mini_gpt4.py:274: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(ckpt_path, map_location="cpu")
+You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama_fast.LlamaTokenizerFast'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565 - if you loaded a llama tokenizer from a GGUF file you can ignore this message.
+/scratch/gilbreth/biswasm/ASTRA_updated/test_CAA_modified_minigpt4/./CAA_modified_generate.py:231: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  steering_data = torch.load(args.steering_vectors_path)
+Loading LLAMA Done
+Load BLIP2-LLM Checkpoint: /scratch/gilbreth/biswasm/ASTRA_updated/ckpts/pretrained_minigpt4.pth
+[Model Initialized]
+
+Loading steering vectors...
+Mean steering vector: [-0.1131 -0.412   0.527  ...  0.8843 -0.2615 -0.5444]
+Steering vector loaded (norm: 40.8750)
+Reading CSV file: ./test_generate_strong_bg.csv
+Found 10 items to process
+Processing items:   0%|          | 0/10 [00:00<?, ?it/s]/scratch/gilbreth/biswasm/ASTRA_updated/test_CAA_modified_minigpt4/./CAA_modified_generate.py:159: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.no_grad(), torch.cuda.amp.autocast():
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:41: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  return torch.cuda.amp.autocast(dtype=dtype)
+/depot/amannodi/apps/ASTRA/envs/astra_minigpt/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:545: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+Processing items:  10%|█         | 1/10 [00:13<01:57, 13.11s/it]Processing items:  20%|██        | 2/10 [00:20<01:18,  9.81s/it]Processing items:  30%|███       | 3/10 [00:28<01:01,  8.75s/it]Processing items:  40%|████      | 4/10 [00:35<00:49,  8.23s/it]Processing items:  50%|█████     | 5/10 [00:43<00:39,  7.96s/it]Processing items:  60%|██████    | 6/10 [00:50<00:30,  7.73s/it]Processing items:  70%|███████   | 7/10 [00:57<00:22,  7.65s/it]Processing items:  80%|████████  | 8/10 [01:05<00:15,  7.59s/it]Processing items:  90%|█████████ | 9/10 [01:12<00:07,  7.55s/it]Processing items: 100%|██████████| 10/10 [01:20<00:00,  7.52s/it]Processing items: 100%|██████████| 10/10 [01:20<00:00,  8.02s/it]
+
+================================================================================
+PROCESSING ROW 1/10
+Image: CAA0034_collect_Dec13_2016_0001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Strong background.
+================================================================================
+DEBUG PROMPT WRAPPER: About to call encode_img with img shape: torch.Size([1, 3, 224, 224])
+DEBUG PROMPT WRAPPER: encode_img returned type: <class 'tuple'>
+DEBUG PROMPT WRAPPER: encode_img returned length: 2
+DEBUG PROMPT WRAPPER: encode_img returned content: (tensor([[[ 0.7104, -1.8145, -2.0391,  ...,  0.5186,  1.4717, -0.5244],
+         [ 3.9863, -3.7285, -4.4688,  ...,  1.7217, -3.0605,  6.2734],
+         [ 7.2188, -6.9609, -2.7891,  ...,  3.2695, -2.1211,  3.9160],
+         ...,
+         [-5.8281,  1.5078,  6.3477,  ..., -1.1152, 11.2891, -1.4902],
+         [ 1.4121,  2.1797,  1.7676,  ..., -0.6919, -1.0527, -0.4619],
+         [ 7.7852, -1.0811, -0.2057,  ...,  2.5371,  1.9229, -1.5557]]],
+       device='cuda:0', dtype=torch.float16), tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1]]))
+DEBUG PROMPT WRAPPER: Successfully unpacked feats shape: torch.Size([1, 32, 5120])
+
+=== GENERATING WITH STEERING (Alpha: 1.2, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 1.2)
+  Original activation: tensor([[ 0.3416, -0.4446,  1.1611,  ..., -0.7954, -1.4873, -0.4680]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.2058, -0.9395,  1.7930,  ...,  0.2661, -1.8008, -1.1211]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Str' (ID: 3767)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 1.2)
+  Original activation: tensor([[-1.7441, -0.3237,  0.1295,  ..., -0.0663,  0.0809, -1.3994]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.8799, -0.8184,  0.7617,  ...,  0.9951, -0.2328, -2.0527]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ong' (ID: 549)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 1.2)
+  Original activation: tensor([[-1.1143, -0.5366,  0.0715,  ..., -1.2705, -0.4304, -1.0020]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.2500, -1.0312,  0.7041,  ..., -0.2090, -0.7441, -1.6553]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'background' (ID: 3239)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Strong background.
+
+================================================================================
+PROCESSING ROW 2/10
+Image: IDP1813_PK.0001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Strong background.
+================================================================================
+DEBUG PROMPT WRAPPER: About to call encode_img with img shape: torch.Size([1, 3, 224, 224])
+DEBUG PROMPT WRAPPER: encode_img returned type: <class 'tuple'>
+DEBUG PROMPT WRAPPER: encode_img returned length: 2
+DEBUG PROMPT WRAPPER: encode_img returned content: (tensor([[[ 0.2637, -1.2471, -2.8066,  ...,  0.9673,  2.9043, -1.2852],
+         [ 2.7773, -3.0234, -2.3145,  ...,  3.2324, -5.2188,  6.5273],
+         [ 6.3203, -6.4336, -3.3945,  ...,  3.0938, -4.5508,  3.4023],
+         ...,
+         [-5.2695,  1.8516,  6.7266,  ..., -1.2266, 11.2578, -2.0781],
+         [ 1.1504,  2.3086,  1.8467,  ..., -0.6470, -0.8818, -0.9751],
+         [ 8.0938, -1.1338, -0.1833,  ...,  1.9434,  1.9385, -1.7871]]],
+       device='cuda:0', dtype=torch.float16), tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1]]))
+DEBUG PROMPT WRAPPER: Successfully unpacked feats shape: torch.Size([1, 32, 5120])
+
+=== GENERATING WITH STEERING (Alpha: 1.2, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 1.2)
+  Original activation: tensor([[ 0.4829, -0.5732,  1.2168,  ..., -0.6387, -1.5820, -0.2837]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.3472, -1.0684,  1.8496,  ...,  0.4229, -1.8955, -0.9370]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Str' (ID: 3767)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 1.2)
+  Original activation: tensor([[-1.6543, -0.5664,  0.1210,  ...,  0.0150,  0.0258, -1.1689]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.7900, -1.0605,  0.7534,  ...,  1.0762, -0.2878, -1.8223]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ong' (ID: 549)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 1.2)
+  Original activation: tensor([[-1.0352, -0.7612,  0.0726,  ..., -1.2598, -0.4377, -0.8857]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.1709, -1.2559,  0.7051,  ..., -0.1982, -0.7515, -1.5391]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'background' (ID: 3239)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Strong background.
+
+================================================================================
+PROCESSING ROW 3/10
+Image: u1_t3.0001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Strong background.
+================================================================================
+DEBUG PROMPT WRAPPER: About to call encode_img with img shape: torch.Size([1, 3, 224, 224])
+DEBUG PROMPT WRAPPER: encode_img returned type: <class 'tuple'>
+DEBUG PROMPT WRAPPER: encode_img returned length: 2
+DEBUG PROMPT WRAPPER: encode_img returned content: (tensor([[[-0.3889,  0.0929, -1.4980,  ..., -3.0859,  0.7964,  3.5996],
+         [ 1.7139, -3.2910, -3.5273,  ...,  2.4062, -4.0195,  4.2617],
+         [ 4.8711, -6.8516, -3.1465,  ...,  4.0195, -3.2285,  3.7012],
+         ...,
+         [-5.5078,  2.0352,  6.1602,  ..., -1.3213, 11.5469, -2.0137],
+         [ 1.4102,  2.2793,  1.5615,  ..., -0.5806, -0.9023, -0.9863],
+         [ 8.5078, -1.1621, -0.4961,  ...,  2.3223,  2.1973, -1.8174]]],
+       device='cuda:0', dtype=torch.float16), tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1]]))
+DEBUG PROMPT WRAPPER: Successfully unpacked feats shape: torch.Size([1, 32, 5120])
+
+=== GENERATING WITH STEERING (Alpha: 1.2, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 1.2)
+  Original activation: tensor([[ 0.3530, -0.5566,  1.2871,  ..., -0.7715, -1.6172, -0.4172]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.2173, -1.0508,  1.9199,  ...,  0.2900, -1.9307, -1.0703]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Str' (ID: 3767)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 1.2)
+  Original activation: tensor([[-1.6328, -0.4133,  0.1531,  ..., -0.0505, -0.0292, -1.2363]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.7686, -0.9082,  0.7852,  ...,  1.0107, -0.3430, -1.8896]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ong' (ID: 549)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 1.2)
+  Original activation: tensor([[-1.0996, -0.7969, -0.0889,  ..., -1.3369, -0.4707, -0.8608]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.2354, -1.2910,  0.5435,  ..., -0.2754, -0.7842, -1.5137]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'background' (ID: 3239)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Strong background.
+
+================================================================================
+PROCESSING ROW 4/10
+Image: 3577_M3_E1_data.0001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Strong background.
+================================================================================
+DEBUG PROMPT WRAPPER: About to call encode_img with img shape: torch.Size([1, 3, 224, 224])
+DEBUG PROMPT WRAPPER: encode_img returned type: <class 'tuple'>
+DEBUG PROMPT WRAPPER: encode_img returned length: 2
+DEBUG PROMPT WRAPPER: encode_img returned content: (tensor([[[ 0.4377, -1.9912, -2.9258,  ...,  0.4463,  2.5605, -1.2363],
+         [ 3.2910, -3.4219, -3.3438,  ...,  1.4307, -3.8262,  5.8477],
+         [ 4.7969, -4.4375, -5.3242,  ..., -0.5205, -2.4375,  5.2812],
+         ...,
+         [-5.6016,  1.6982,  7.0547,  ..., -0.9941, 11.2969, -2.1035],
+         [ 1.2031,  2.2461,  2.0742,  ..., -0.2969, -0.9580, -0.9136],
+         [ 7.8203, -0.7778, -0.3865,  ...,  2.1562,  2.4355, -1.9668]]],
+       device='cuda:0', dtype=torch.float16), tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1]]))
+DEBUG PROMPT WRAPPER: Successfully unpacked feats shape: torch.Size([1, 32, 5120])
+
+=== GENERATING WITH STEERING (Alpha: 1.2, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 1.2)
+  Original activation: tensor([[ 0.5439, -0.5308,  1.3184,  ..., -0.6045, -1.4922, -0.3013]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.4082, -1.0254,  1.9512,  ...,  0.4570, -1.8057, -0.9546]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Str' (ID: 3767)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 1.2)
+  Original activation: tensor([[-1.7148, -0.4309,  0.0671,  ...,  0.0970,  0.0217, -1.2188]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.8506, -0.9258,  0.6992,  ...,  1.1582, -0.2920, -1.8721]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ong' (ID: 549)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 1.2)
+  Original activation: tensor([[-1.1270, -0.7139,  0.0641,  ..., -1.1758, -0.3826, -0.7646]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.2627, -1.2090,  0.6963,  ..., -0.1143, -0.6963, -1.4180]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'background' (ID: 3239)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Strong background.
+
+================================================================================
+PROCESSING ROW 5/10
+Image: p8_c11_00001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Strong background.
+================================================================================
+DEBUG PROMPT WRAPPER: About to call encode_img with img shape: torch.Size([1, 3, 224, 224])
+DEBUG PROMPT WRAPPER: encode_img returned type: <class 'tuple'>
+DEBUG PROMPT WRAPPER: encode_img returned length: 2
+DEBUG PROMPT WRAPPER: encode_img returned content: (tensor([[[-0.0585, -0.9395, -3.4961,  ...,  0.3711,  2.3789, -1.7275],
+         [ 2.4316, -2.0938, -4.3633,  ...,  3.1074, -4.4531,  5.7539],
+         [ 6.1133, -7.6289, -5.1680,  ...,  2.4570, -2.4434,  4.8203],
+         ...,
+         [-5.1055,  1.6641,  6.1289,  ..., -1.2031, 10.6562, -2.0586],
+         [ 1.4297,  2.5547,  1.9189,  ..., -0.6255, -1.0312, -0.8164],
+         [ 7.6719, -0.6836, -0.3828,  ...,  2.7617,  1.7754, -1.9824]]],
+       device='cuda:0', dtype=torch.float16), tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1]]))
+DEBUG PROMPT WRAPPER: Successfully unpacked feats shape: torch.Size([1, 32, 5120])
+
+=== GENERATING WITH STEERING (Alpha: 1.2, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 1.2)
+  Original activation: tensor([[ 0.4150, -0.5542,  1.1211,  ..., -0.7529, -1.4619, -0.3943]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.2793, -1.0488,  1.7539,  ...,  0.3086, -1.7754, -1.0479]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Str' (ID: 3767)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 1.2)
+  Original activation: tensor([[-1.6934, -0.3633,  0.1255,  ..., -0.0616,  0.1415, -1.2627]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.8291, -0.8579,  0.7578,  ...,  1.0000, -0.1722, -1.9160]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ong' (ID: 549)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 1.2)
+  Original activation: tensor([[-0.9922, -0.6162,  0.0420,  ..., -1.2119, -0.3711, -1.0508]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.1279, -1.1113,  0.6743,  ..., -0.1504, -0.6846, -1.7041]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'background' (ID: 3239)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Strong background.
+
+================================================================================
+PROCESSING ROW 6/10
+Image: 202980_0_E1_00001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Strong background.
+================================================================================
+DEBUG PROMPT WRAPPER: About to call encode_img with img shape: torch.Size([1, 3, 224, 224])
+DEBUG PROMPT WRAPPER: encode_img returned type: <class 'tuple'>
+DEBUG PROMPT WRAPPER: encode_img returned length: 2
+DEBUG PROMPT WRAPPER: encode_img returned content: (tensor([[[ 0.8340, -1.8799, -2.8398,  ...,  0.3262,  1.0801, -0.1348],
+         [ 3.7500, -2.7441, -3.8379,  ...,  1.6270, -3.5020,  5.9180],
+         [ 5.6094, -5.4492, -4.7031,  ...,  1.7764, -2.4492,  4.5039],
+         ...,
+         [-5.9219,  1.3877,  6.3320,  ..., -0.8560, 10.9219, -1.7021],
+         [ 1.1709,  2.3047,  1.8906,  ..., -0.5244, -1.1572, -0.6396],
+         [ 7.5312, -0.3608, -0.7393,  ...,  2.9395,  2.1641, -1.9307]]],
+       device='cuda:0', dtype=torch.float16), tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1]]))
+DEBUG PROMPT WRAPPER: Successfully unpacked feats shape: torch.Size([1, 32, 5120])
+
+=== GENERATING WITH STEERING (Alpha: 1.2, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 1.2)
+  Original activation: tensor([[ 0.3105, -0.5107,  1.2109,  ..., -0.6831, -1.5996, -0.3726]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.1748, -1.0059,  1.8438,  ...,  0.3784, -1.9131, -1.0254]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Background' (ID: 16585)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 1.2)
+  Original activation: tensor([[-2.4434, -0.7871,  0.4158,  ..., -1.4023, -1.7559, -0.9600]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-2.5781, -1.2812,  1.0479,  ..., -0.3408, -2.0703, -1.6133]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ring' (ID: 9228)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 1.2)
+  Original activation: tensor([[-1.6934, -0.7524,  0.2137,  ..., -0.2617,  0.3906, -1.5127]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.8291, -1.2471,  0.8462,  ...,  0.7998,  0.0769, -2.1660]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '
+' (ID: 13)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '##' (ID: 2277)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 6
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Background ring.
+
+================================================================================
+PROCESSING ROW 7/10
+Image: 47532_1_E1_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Strong background.
+================================================================================
+DEBUG PROMPT WRAPPER: About to call encode_img with img shape: torch.Size([1, 3, 224, 224])
+DEBUG PROMPT WRAPPER: encode_img returned type: <class 'tuple'>
+DEBUG PROMPT WRAPPER: encode_img returned length: 2
+DEBUG PROMPT WRAPPER: encode_img returned content: (tensor([[[ 0.7236, -1.8701, -2.3730,  ...,  0.4067,  0.9160, -0.3787],
+         [ 3.6289, -2.2441, -3.7910,  ...,  1.1709, -3.6074,  5.7422],
+         [ 6.5664, -5.4844, -3.4375,  ...,  2.2266, -2.8711,  5.2383],
+         ...,
+         [-5.5469,  1.7832,  6.5117,  ..., -0.7319, 11.3281, -1.3281],
+         [ 1.7393,  2.1816,  1.8975,  ..., -0.6592, -1.2480, -0.5508],
+         [ 8.3281, -0.6616, -0.1525,  ...,  2.2402,  2.7383, -2.1738]]],
+       device='cuda:0', dtype=torch.float16), tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1]]))
+DEBUG PROMPT WRAPPER: Successfully unpacked feats shape: torch.Size([1, 32, 5120])
+
+=== GENERATING WITH STEERING (Alpha: 1.2, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 1.2)
+  Original activation: tensor([[ 0.3960, -0.5542,  1.3281,  ..., -0.6851, -1.5391, -0.3948]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.2603, -1.0488,  1.9609,  ...,  0.3765, -1.8525, -1.0479]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Str' (ID: 3767)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 1.2)
+  Original activation: tensor([[-1.7012, -0.3916,  0.1094,  ..., -0.0063,  0.0326, -1.2656]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.8369, -0.8862,  0.7417,  ...,  1.0547, -0.2812, -1.9189]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ong' (ID: 549)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 1.2)
+  Original activation: tensor([[-1.1807, -0.7012,  0.0492,  ..., -1.2852, -0.4814, -1.0059]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.3164, -1.1953,  0.6816,  ..., -0.2236, -0.7949, -1.6592]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'background' (ID: 3239)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Strong background.
+
+================================================================================
+PROCESSING ROW 8/10
+Image: 216516b9_x0001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Strong background.
+================================================================================
+DEBUG PROMPT WRAPPER: About to call encode_img with img shape: torch.Size([1, 3, 224, 224])
+DEBUG PROMPT WRAPPER: encode_img returned type: <class 'tuple'>
+DEBUG PROMPT WRAPPER: encode_img returned length: 2
+DEBUG PROMPT WRAPPER: encode_img returned content: (tensor([[[ 0.0457, -1.3271, -1.8604,  ...,  0.1351,  3.4102, -1.6289],
+         [ 2.9219, -3.3633, -3.3086,  ...,  2.7949, -3.5117,  6.1445],
+         [ 5.0000, -4.8086, -3.1777,  ...,  1.3945, -2.9297,  7.6406],
+         ...,
+         [-5.1875,  1.4355,  6.3633,  ..., -1.0371, 11.2109, -1.9717],
+         [ 1.3281,  2.3555,  1.5986,  ..., -0.6143, -0.8911, -0.6284],
+         [ 8.0156, -0.7598, -0.4602,  ...,  2.9336,  1.8311, -1.4883]]],
+       device='cuda:0', dtype=torch.float16), tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1]]))
+DEBUG PROMPT WRAPPER: Successfully unpacked feats shape: torch.Size([1, 32, 5120])
+
+=== GENERATING WITH STEERING (Alpha: 1.2, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 1.2)
+  Original activation: tensor([[ 0.5366, -0.5596,  1.1592,  ..., -0.6890, -1.5908, -0.4453]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.4009, -1.0547,  1.7910,  ...,  0.3726, -1.9043, -1.0986]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Str' (ID: 3767)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 1.2)
+  Original activation: tensor([[-1.7266, -0.4556,  0.1533,  ..., -0.0085,  0.0855, -1.3135]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.8623, -0.9502,  0.7856,  ...,  1.0527, -0.2283, -1.9668]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ong' (ID: 549)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 1.2)
+  Original activation: tensor([[-1.2393, -0.7827,  0.0977,  ..., -1.2852, -0.3438, -0.9331]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.3750, -1.2773,  0.7300,  ..., -0.2236, -0.6572, -1.5859]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'background' (ID: 3239)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Strong background.
+
+================================================================================
+PROCESSING ROW 9/10
+Image: XV1_STAM0001_40001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Strong background.
+================================================================================
+DEBUG PROMPT WRAPPER: About to call encode_img with img shape: torch.Size([1, 3, 224, 224])
+DEBUG PROMPT WRAPPER: encode_img returned type: <class 'tuple'>
+DEBUG PROMPT WRAPPER: encode_img returned length: 2
+DEBUG PROMPT WRAPPER: encode_img returned content: (tensor([[[ 0.0843, -1.2852, -2.2383,  ..., -0.1575,  1.6113, -0.9712],
+         [ 2.7773, -2.1914, -4.6836,  ...,  0.3315, -2.9277,  5.2305],
+         [ 6.3398, -5.5859, -3.1270,  ...,  3.5273, -2.9473,  3.6406],
+         ...,
+         [-5.6992,  1.9199,  6.2734,  ..., -1.1816, 11.2422, -1.7266],
+         [ 1.2529,  2.2070,  2.0254,  ..., -0.7051, -0.9722, -0.5146],
+         [ 7.6562, -1.1416,  0.1332,  ...,  2.4297,  2.0566, -1.7051]]],
+       device='cuda:0', dtype=torch.float16), tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1]]))
+DEBUG PROMPT WRAPPER: Successfully unpacked feats shape: torch.Size([1, 32, 5120])
+
+=== GENERATING WITH STEERING (Alpha: 1.2, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 1.2)
+  Original activation: tensor([[ 0.3196, -0.4902,  1.2246,  ..., -0.7812, -1.5820, -0.4521]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.1838, -0.9849,  1.8574,  ...,  0.2803, -1.8955, -1.1055]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Str' (ID: 3767)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 1.2)
+  Original activation: tensor([[-1.7393, -0.3423,  0.1631,  ...,  0.0086,  0.0599, -1.2275]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.8750, -0.8369,  0.7954,  ...,  1.0703, -0.2539, -1.8809]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ong' (ID: 549)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 1.2)
+  Original activation: tensor([[-1.0488, -0.6387,  0.1218,  ..., -1.3096, -0.3999, -0.9810]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.1846, -1.1328,  0.7539,  ..., -0.2480, -0.7139, -1.6348]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'background' (ID: 3239)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Strong background.
+
+================================================================================
+PROCESSING ROW 10/10
+Image: IDP91972-2.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Strong background.
+================================================================================
+DEBUG PROMPT WRAPPER: About to call encode_img with img shape: torch.Size([1, 3, 224, 224])
+DEBUG PROMPT WRAPPER: encode_img returned type: <class 'tuple'>
+DEBUG PROMPT WRAPPER: encode_img returned length: 2
+DEBUG PROMPT WRAPPER: encode_img returned content: (tensor([[[ 0.5205, -1.5332, -2.9551,  ...,  0.1462,  1.6885, -0.7256],
+         [ 3.6602, -2.3574, -3.9922,  ...,  1.0195, -3.6016,  5.4219],
+         [ 6.2461, -5.9023, -4.1680,  ...,  2.2852, -3.2012,  4.3672],
+         ...,
+         [-5.6992,  1.3447,  6.4766,  ..., -0.9312, 11.2500, -1.8027],
+         [ 1.2764,  2.2344,  1.9141,  ..., -0.5249, -1.1133, -0.6367],
+         [ 7.5430, -0.7080, -0.3293,  ...,  2.5156,  1.9072, -1.8545]]],
+       device='cuda:0', dtype=torch.float16), tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+         1, 1, 1, 1, 1, 1, 1, 1]]))
+DEBUG PROMPT WRAPPER: Successfully unpacked feats shape: torch.Size([1, 32, 5120])
+
+=== GENERATING WITH STEERING (Alpha: 1.2, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 50
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 1.2)
+  Original activation: tensor([[ 0.3953, -0.4229,  1.1826,  ..., -0.6240, -1.6035, -0.2620]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.2595, -0.9175,  1.8145,  ...,  0.4375, -1.9170, -0.9150]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Str' (ID: 3767)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 1.2)
+  Original activation: tensor([[-1.6465, -0.3887,  0.1792,  ..., -0.0091,  0.1677, -1.2402]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.7822, -0.8833,  0.8115,  ...,  1.0527, -0.1460, -1.8936]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ong' (ID: 549)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 1.2)
+  Original activation: tensor([[-1.1299, -0.6489,  0.1069,  ..., -1.2256, -0.4961, -1.0156]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.2656, -1.1436,  0.7393,  ..., -0.1641, -0.8096, -1.6689]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'background' (ID: 3239)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Strong background.
+
+Results saved to ./Strong_bg_CAA_generation_results_layer_16_alpha_1.2_artifact.csv
+Processed 10 items successfully

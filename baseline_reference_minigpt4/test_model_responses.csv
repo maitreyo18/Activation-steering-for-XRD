@@ -1,0 +1,221 @@
+image_name,prompt,correct_answer,model_response
+3531_B2opt_data.0001.png,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. diffuse scattering, loop scattering and strong background
+B. artifact
+C. background ring and non-uniform detector
+D. ice ring
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly.", C,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. diffuse scattering, loop scattering and strong background
+B. artifact
+C. background ring and non-uniform detector
+D. ice ring
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly. C"
+3531_B2opt_data.0001.png,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. diffuse scattering, loop scattering and strong background
+B. artifact
+C. background ring and non-uniform detector
+D. ice ring
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly.", D,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. diffuse scattering, loop scattering and strong background
+B. artifact
+C. background ring and non-uniform detector
+D. ice ring
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly. D"
+55315_2_001.png,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. diffuse scattering and ice ring
+B. loop scattering
+C. background ring
+D. non-uniform detector
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly.", C,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. diffuse scattering and ice ring
+B. loop scattering
+C. background ring
+D. non-uniform detector
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly. C"
+55315_2_001.png,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. diffuse scattering and ice ring
+B. loop scattering
+C. background ring
+D. non-uniform detector
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly.", D,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. diffuse scattering and ice ring
+B. loop scattering
+C. background ring
+D. non-uniform detector
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly. D"
+175943_1_E1_00001.png,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. non-uniform detector
+B. background ring
+C. strong background and artifact
+D. loop scattering
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly.", C,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. non-uniform detector
+B. background ring
+C. strong background and artifact
+D. loop scattering
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly. C"
+175943_1_E1_00001.png,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. non-uniform detector
+B. background ring
+C. strong background and artifact
+D. loop scattering
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly.", D,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. non-uniform detector
+B. background ring
+C. strong background and artifact
+D. loop scattering
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly. D"
+86977_2_E1_001.png,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. loop scattering and strong background
+B. diffuse scattering
+C. ice ring
+D. non-uniform detector, artifact and background ring
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly.", C,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. loop scattering and strong background
+B. diffuse scattering
+C. ice ring
+D. non-uniform detector, artifact and background ring
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly. C"
+86977_2_E1_001.png,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. loop scattering and strong background
+B. diffuse scattering
+C. ice ring
+D. non-uniform detector, artifact and background ring
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly.", D,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. loop scattering and strong background
+B. diffuse scattering
+C. ice ring
+D. non-uniform detector, artifact and background ring
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly. D"
+11039_4_001.png,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. background ring and non-uniform detector
+B. strong background, ice ring and loop scattering
+C. no anomalies
+D. artifact
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly.", C,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. background ring and non-uniform detector
+B. strong background, ice ring and loop scattering
+C. no anomalies
+D. artifact
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly. C"
+11039_4_001.png,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. background ring and non-uniform detector
+B. strong background, ice ring and loop scattering
+C. no anomalies
+D. artifact
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly.", D,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. background ring and non-uniform detector
+B. strong background, ice ring and loop scattering
+C. no anomalies
+D. artifact
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly. D"
+122870_1_E1_001.png,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. ice ring, diffuse scattering and non-uniform detector
+B. artifact and background ring
+C. loop scattering and strong background
+D. diffuse scattering and ice ring
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly.", C,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. ice ring, diffuse scattering and non-uniform detector
+B. artifact and background ring
+C. loop scattering and strong background
+D. diffuse scattering and ice ring
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly. C"
+122870_1_E1_001.png,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. ice ring, diffuse scattering and non-uniform detector
+B. artifact and background ring
+C. loop scattering and strong background
+D. diffuse scattering and ice ring
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly.", D,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. ice ring, diffuse scattering and non-uniform detector
+B. artifact and background ring
+C. loop scattering and strong background
+D. diffuse scattering and ice ring
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly. D"
+h5h5h3-11_1_001.png,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. loop scattering, ice ring and non-uniform detector
+B. background ring
+C. diffuse scattering and strong background
+D. artifact
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly.", C,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. loop scattering, ice ring and non-uniform detector
+B. background ring
+C. diffuse scattering and strong background
+D. artifact
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly. C"
+h5h5h3-11_1_001.png,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. loop scattering, ice ring and non-uniform detector
+B. background ring
+C. diffuse scattering and strong background
+D. artifact
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly.", D,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. loop scattering, ice ring and non-uniform detector
+B. background ring
+C. diffuse scattering and strong background
+D. artifact
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly. D"
+37235_1_E2_001.png,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. loop scattering and strong background
+B. diffuse scattering and background ring
+C. non-uniform detector, artifact and ice ring
+D. background ring and artifact
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly.", C,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. loop scattering and strong background
+B. diffuse scattering and background ring
+C. non-uniform detector, artifact and ice ring
+D. background ring and artifact
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly. C"
+37235_1_E2_001.png,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. loop scattering and strong background
+B. diffuse scattering and background ring
+C. non-uniform detector, artifact and ice ring
+D. background ring and artifact
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly.", D,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. loop scattering and strong background
+B. diffuse scattering and background ring
+C. non-uniform detector, artifact and ice ring
+D. background ring and artifact
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly. D"
+151666_1_E1_0001.png,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. non-uniform detector
+B. ice ring and artifact
+C. background ring, strong background and diffuse scattering
+D. loop scattering
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly.", C,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. non-uniform detector
+B. ice ring and artifact
+C. background ring, strong background and diffuse scattering
+D. loop scattering
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly. C"
+151666_1_E1_0001.png,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. non-uniform detector
+B. ice ring and artifact
+C. background ring, strong background and diffuse scattering
+D. loop scattering
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly.", D,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. non-uniform detector
+B. ice ring and artifact
+C. background ring, strong background and diffuse scattering
+D. loop scattering
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly. D"
+12c19p1_2_E3_001.png,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. background ring and non-uniform detector
+B. strong background, loop scattering and ice ring
+C. artifact
+D. diffuse scattering
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly.", C,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. background ring and non-uniform detector
+B. strong background, loop scattering and ice ring
+C. artifact
+D. diffuse scattering
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly. C"
+12c19p1_2_E3_001.png,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. background ring and non-uniform detector
+B. strong background, loop scattering and ice ring
+C. artifact
+D. diffuse scattering
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly.", D,"This is a X-ray diffraction image. Which option is correct about the anomalies present?:
+A. background ring and non-uniform detector
+B. strong background, loop scattering and ice ring
+C. artifact
+D. diffuse scattering
+IMPORTANT: Please do not give any explanation. Answer with the option's letter from the given choices directly. D"

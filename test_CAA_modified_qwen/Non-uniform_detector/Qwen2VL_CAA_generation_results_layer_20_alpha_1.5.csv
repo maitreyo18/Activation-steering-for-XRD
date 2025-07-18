@@ -1,0 +1,701 @@
+image_name,prompt,answer,Steered,no_steer
+62506_1_E2_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+10849_1_E2_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+T1855_4_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+16830_1_E1_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+1009107_1_A3_inf.0001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+12525_5_E1_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+162366_1_E2_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+91049_1_E1_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,Diffuse scattering
+18c14p3_2_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+2715_2_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+10167_1_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+tm0875_8p44_1_E2_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+d3_p9_101_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+31827_1_E1_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+T3527_2_E3_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+10230_5_E1_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+32436_1_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+58689_2_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+97429_2.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+mtb_trpAB_PI_F6_B4_eg_x3_data2.0001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Diffuse scattering,Loop scattering
+17c10p4_2_E1_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+9168_1_E1_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+8591_5_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-background-ring,Ice ring
+T1266_2_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+IDP00573_3GO9.0001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+1077_M1_F1_2_low.0001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-background-ring,Loop scattering
+12525_5_E3_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+94590_4.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+44338_3_E1_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+8591_2_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+12972_3_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+62506_2_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,Ice ring
+9439_2_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+10230_7_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+23c28p2_1_E2_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,Loop scattering
+m1d3gly.0001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,Ice ring
+23c28p2_2_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+IDP00122_3cwc.0301.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+19051_2_E2_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+159940_2_00001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+T3702_3_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+T3527_2_E1_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+96698_2.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,Ice ring
+12217_1_E2_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+34336_2_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+271TrpF_M4_C1_x3_low.0001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+9664_1_E2_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+21c10p2_2_E1_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+61537_4_001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.
+FADANL2D3gly1-peak.0001.png,"This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+Options:
+
+Background ring, 
+Ice ring, 
+Artifact, 
+Diffuse scattering, 
+Strong background, 
+Non-uniform detector, 
+Loop scattering,
+No distinct anomalies.
+
+Choose the correct option. 
+IMPORTANT: Please do not provide any explanation. Just the anomaly option name.",Non-uniform detector.,-Non-uniform detector,No distinct anomalies.

@@ -1,0 +1,48 @@
+Experimental Args === Namespace(alpha=0.0, attack_type='unconstrain', feat_type='diff_attr', variable_element='visual_jail', threshold=0.5, steer_layer=20, steer_vector='jb', eval='test', cfg_path='eval_configs/minigpt4_eval.yaml', gpu_id=0, options=None)
+Loading VIT
+Loading VIT Done
+Loading Q-Former
+Loading Q-Former Done
+Loading LLAMA
+Loading LLAMA Done
+Load BLIP2-LLM Checkpoint: ckpts/pretrained_minigpt4.pth
+[Initialization Finished]
+
+Len of the questions:  6311
+Experimental Args === Namespace(alpha=0.0, attack_type='unconstrain', feat_type='diff_attr', variable_element='visual_jail', threshold=0.5, steer_layer=20, steer_vector='jb', low_resource='False', eval='test', cfg_path='eval_configs/minigpt4_eval.yaml', gpu_id=0, options=None)
+Loading VIT
+Loading VIT Done
+Loading Q-Former
+Loading Q-Former Done
+Loading LLAMA
+Experimental Args === Namespace(alpha=10.0, attack_type='constrain_16', feat_type='diff_attr', variable_element='visual_jail', threshold=0.5, steer_layer=20, steer_vector='desc', low_resource='False', eval='test', cfg_path='eval_configs/minigpt4_eval.yaml', gpu_id=0, options=None)
+Loading VIT
+Loading VIT Done
+Loading Q-Former
+Loading Q-Former Done
+Loading LLAMA
+Loading LLAMA Done
+Load BLIP2-LLM Checkpoint: /scratch/gilbreth/biswasm/ASTRA_updated/ckpts/pretrained_minigpt4.pth
+[Initialization Finished]
+
+Experimental Args === Namespace(alpha=10.0, attack_type='constrain_16', feat_type='diff_attr', variable_element='visual_jail', threshold=0.5, steer_layer=20, steer_vector='desc', low_resource='False', eval='test', cfg_path='eval_configs/minigpt4_eval.yaml', gpu_id=0, options=None)
+Loading VIT
+Loading VIT Done
+Loading Q-Former
+Loading Q-Former Done
+Loading LLAMA
+Loading LLAMA Done
+Load BLIP2-LLM Checkpoint: /scratch/gilbreth/biswasm/ASTRA_updated/ckpts/pretrained_minigpt4.pth
+[Initialization Finished]
+
+Experimental Args === Namespace(alpha=10.0, attack_type='constrain_16', feat_type='diff_attr', variable_element='visual_jail', threshold=0.5, steer_layer=20, steer_vector='desc', low_resource='False', eval='test', cfg_path='eval_configs/minigpt4_eval.yaml', gpu_id=0, options=None)
+Loading VIT
+Loading VIT Done
+Loading Q-Former
+Loading Q-Former Done
+Loading LLAMA
+Loading LLAMA Done
+Load BLIP2-LLM Checkpoint: /scratch/gilbreth/biswasm/ASTRA_updated/ckpts/pretrained_minigpt4.pth
+[Initialization Finished]
+
+Len of the questions:  300

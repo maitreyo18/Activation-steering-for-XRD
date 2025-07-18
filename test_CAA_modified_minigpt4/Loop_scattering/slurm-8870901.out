@@ -1,0 +1,1397 @@
+Fri Jul  4 17:23:19 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla V100-PCIE-32GB           On  |   00000000:3B:00.0 Off |                    0 |
+| N/A   31C    P0             25W /  250W |       1MiB /  32768MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+/depot/amannodi/apps/ASTRA/envs/astra_minigpt/lib/python3.10/site-packages/transformers/utils/hub.py:127: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/eva_vit.py:433: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(cached_file, map_location="cpu")
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:77: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(cached_file, map_location="cpu")
+You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama.LlamaTokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565 - if you loaded a llama tokenizer from a GGUF file you can ignore this message
+The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+=== CAA Generation with Continuous Steering (Batch Mode) ===
+CSV File: ./test_generate_loop_scattering.csv
+Image Directory: ../datasets/XRD_data/one_correct/loop_scattering
+Alpha: 0.75, Layer: 16
+Loading VIT
+Loading VIT Done
+Loading Q-Former
+Loading Q-Former Done
+Loading LLAMA
+Downloading shards:   0%|          | 0/3 [00:00<?, ?it/s]Downloading shards: 100%|██████████| 3/3 [00:00<00:00, 554.75it/s]
+/depot/amannodi/apps/ASTRA/envs/astra_minigpt/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:519: UserWarning: `pad_token_id` should be positive but got -1. This will cause errors when batch generating, if there is padding. Please set `pad_token_id` explicitly by `model.generation_config.pad_token_id=PAD_TOKEN_ID` to avoid errors in generation, and ensure your `input_ids` input does not have negative values.
+  warnings.warn(
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:21<00:42, 21.10s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:40<00:19, 19.93s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:51<00:00, 16.04s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:51<00:00, 17.21s/it]
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/mini_gpt4.py:274: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(ckpt_path, map_location="cpu")
+You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama_fast.LlamaTokenizerFast'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565 - if you loaded a llama tokenizer from a GGUF file you can ignore this message.
+/scratch/gilbreth/biswasm/ASTRA_updated/test_CAA_modified/./CAA_modified_generate.py:231: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  steering_data = torch.load(args.steering_vectors_path)
+Loading LLAMA Done
+Load BLIP2-LLM Checkpoint: /scratch/gilbreth/biswasm/ASTRA_updated/ckpts/pretrained_minigpt4.pth
+[Model Initialized]
+
+Loading steering vectors...
+Mean steering vector: [ 0.2104 -0.918   0.29   ... -0.2028 -0.1747  0.1136]
+Steering vector loaded (norm: 61.6562)
+Reading CSV file: ./test_generate_loop_scattering.csv
+Found 24 items to process
+Processing items:   0%|          | 0/24 [00:00<?, ?it/s]/scratch/gilbreth/biswasm/ASTRA_updated/test_CAA_modified/./CAA_modified_generate.py:159: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.no_grad(), torch.cuda.amp.autocast():
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:41: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  return torch.cuda.amp.autocast(dtype=dtype)
+/depot/amannodi/apps/ASTRA/envs/astra_minigpt/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:545: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+Processing items:   4%|▍         | 1/24 [00:12<04:54, 12.81s/it]Processing items:   8%|▊         | 2/24 [00:21<03:52, 10.58s/it]Processing items:  12%|█▎        | 3/24 [00:30<03:27,  9.86s/it]Processing items:  17%|█▋        | 4/24 [00:39<03:10,  9.54s/it]Processing items:  21%|██        | 5/24 [00:48<02:57,  9.36s/it]Processing items:  25%|██▌       | 6/24 [00:57<02:46,  9.24s/it]Processing items:  29%|██▉       | 7/24 [01:06<02:35,  9.16s/it]Processing items:  33%|███▎      | 8/24 [01:15<02:25,  9.12s/it]Processing items:  38%|███▊      | 9/24 [01:25<02:17,  9.17s/it]Processing items:  42%|████▏     | 10/24 [01:34<02:08,  9.20s/it]Processing items:  46%|████▌     | 11/24 [01:43<01:59,  9.16s/it]Processing items:  50%|█████     | 12/24 [01:52<01:50,  9.22s/it]Processing items:  54%|█████▍    | 13/24 [02:01<01:40,  9.15s/it]Processing items:  58%|█████▊    | 14/24 [02:10<01:31,  9.12s/it]Processing items:  62%|██████▎   | 15/24 [02:19<01:21,  9.09s/it]Processing items:  67%|██████▋   | 16/24 [02:29<01:12,  9.07s/it]Processing items:  71%|███████   | 17/24 [02:38<01:03,  9.07s/it]Processing items:  75%|███████▌  | 18/24 [02:47<00:54,  9.04s/it]Processing items:  79%|███████▉  | 19/24 [02:56<00:45,  9.03s/it]Processing items:  83%|████████▎ | 20/24 [03:05<00:36,  9.05s/it]Processing items:  88%|████████▊ | 21/24 [03:14<00:27,  9.05s/it]Processing items:  92%|█████████▏| 22/24 [03:23<00:18,  9.05s/it]Processing items:  96%|█████████▌| 23/24 [03:32<00:09,  9.12s/it]Processing items: 100%|██████████| 24/24 [03:41<00:00,  9.11s/it]Processing items: 100%|██████████| 24/24 [03:41<00:00,  9.23s/it]
+
+================================================================================
+PROCESSING ROW 1/24
+Image: 157568_1_E2_0001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH STEERING (Alpha: 0.75, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 512
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 0.75)
+  Original activation: tensor([[ 0.4194, -0.4043,  1.2979,  ..., -0.7490, -1.6309, -0.3413]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5771, -1.0928,  1.5156,  ..., -0.9014, -1.7617, -0.2561]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Loop' (ID: 21493)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 0.75)
+  Original activation: tensor([[-1.2471, -0.5737,  0.2236,  ..., -1.0635,  0.2954, -0.5815]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.0889, -1.2617,  0.4412,  ..., -1.2158,  0.1644, -0.4963]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'scatter' (ID: 14801)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 0.75)
+  Original activation: tensor([[ 0.3108, -0.4688, -0.4319,  ..., -0.8701, -0.1962,  0.9097]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.4688, -1.1572, -0.2144,  ..., -1.0225, -0.3271,  0.9951]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ing' (ID: 292)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Loop scattering.
+
+================================================================================
+PROCESSING ROW 2/24
+Image: 157568_2_0001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH STEERING (Alpha: 0.75, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 512
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 0.75)
+  Original activation: tensor([[ 0.4773, -0.4050,  1.3193,  ..., -0.7300, -1.6299, -0.3433]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.6353, -1.0938,  1.5371,  ..., -0.8818, -1.7607, -0.2581]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Loop' (ID: 21493)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 0.75)
+  Original activation: tensor([[-1.2148, -0.6079,  0.2162,  ..., -1.0352,  0.2710, -0.5439]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.0566, -1.2969,  0.4336,  ..., -1.1875,  0.1400, -0.4587]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'scatter' (ID: 14801)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 0.75)
+  Original activation: tensor([[ 0.4976, -0.3513, -0.2944,  ..., -0.8794, -0.3213,  0.8369]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.6553, -1.0400, -0.0769,  ..., -1.0312, -0.4521,  0.9219]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ing' (ID: 292)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Loop scattering.
+
+================================================================================
+PROCESSING ROW 3/24
+Image: 130568_2_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH STEERING (Alpha: 0.75, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 512
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 0.75)
+  Original activation: tensor([[ 0.4058, -0.4258,  1.2656,  ..., -0.7388, -1.6689, -0.3218]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5635, -1.1143,  1.4834,  ..., -0.8906, -1.7998, -0.2366]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Loop' (ID: 21493)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 0.75)
+  Original activation: tensor([[-1.2363, -0.5605,  0.1650,  ..., -1.0703,  0.2656, -0.6006]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.0781, -1.2490,  0.3826,  ..., -1.2227,  0.1346, -0.5156]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'scatter' (ID: 14801)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 0.75)
+  Original activation: tensor([[ 0.5361, -0.3018, -0.3794,  ..., -1.0039, -0.1843,  0.8354]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.6938, -0.9902, -0.1619,  ..., -1.1562, -0.3154,  0.9209]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ing' (ID: 292)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Loop scattering.
+
+================================================================================
+PROCESSING ROW 4/24
+Image: 106264_2_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH STEERING (Alpha: 0.75, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 512
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 0.75)
+  Original activation: tensor([[ 0.3857, -0.3994,  1.2568,  ..., -0.7637, -1.6377, -0.3350]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5435, -1.0879,  1.4746,  ..., -0.9160, -1.7686, -0.2498]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Loop' (ID: 21493)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 0.75)
+  Original activation: tensor([[-1.2637, -0.5562,  0.1940,  ..., -1.0469,  0.2998, -0.5674]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.1055, -1.2441,  0.4116,  ..., -1.1992,  0.1688, -0.4822]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'scatter' (ID: 14801)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 0.75)
+  Original activation: tensor([[ 0.4563, -0.2961, -0.3638,  ..., -1.0234, -0.2415,  0.8037]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.6143, -0.9844, -0.1462,  ..., -1.1758, -0.3726,  0.8887]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ing' (ID: 292)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Loop scattering.
+
+================================================================================
+PROCESSING ROW 5/24
+Image: 151666_1_E1_0001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH STEERING (Alpha: 0.75, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 512
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 0.75)
+  Original activation: tensor([[ 0.4106, -0.4219,  1.2920,  ..., -0.7549, -1.6562, -0.3477]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5684, -1.1104,  1.5098,  ..., -0.9072, -1.7871, -0.2625]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Loop' (ID: 21493)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 0.75)
+  Original activation: tensor([[-1.2559, -0.6011,  0.1904,  ..., -1.0898,  0.2690, -0.6025]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.0977, -1.2891,  0.4080,  ..., -1.2422,  0.1381, -0.5176]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'scatter' (ID: 14801)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 0.75)
+  Original activation: tensor([[ 0.2559, -0.4382, -0.4775,  ..., -0.8892, -0.1932,  0.8467]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.4136, -1.1270, -0.2600,  ..., -1.0410, -0.3242,  0.9316]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ing' (ID: 292)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Loop scattering.
+
+================================================================================
+PROCESSING ROW 6/24
+Image: 105616_1_E1_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH STEERING (Alpha: 0.75, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 512
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 0.75)
+  Original activation: tensor([[ 0.3901, -0.3923,  1.2646,  ..., -0.7373, -1.6768, -0.3242]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5479, -1.0811,  1.4824,  ..., -0.8896, -1.8076, -0.2390]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Loop' (ID: 21493)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 0.75)
+  Original activation: tensor([[-1.2393, -0.5698,  0.1583,  ..., -1.0723,  0.2428, -0.5947]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.0811, -1.2578,  0.3760,  ..., -1.2246,  0.1118, -0.5098]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'scatter' (ID: 14801)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 0.75)
+  Original activation: tensor([[ 0.5181, -0.3040, -0.3577,  ..., -0.9160, -0.2236,  0.8354]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.6758, -0.9922, -0.1401,  ..., -1.0684, -0.3545,  0.9209]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ing' (ID: 292)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Loop scattering.
+
+================================================================================
+PROCESSING ROW 7/24
+Image: 63581_1_E1.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH STEERING (Alpha: 0.75, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 512
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 0.75)
+  Original activation: tensor([[ 0.3577, -0.3596,  1.2080,  ..., -0.7808, -1.5928, -0.3306]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5156, -1.0479,  1.4258,  ..., -0.9326, -1.7236, -0.2454]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Loop' (ID: 21493)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 0.75)
+  Original activation: tensor([[-1.2607, -0.5542,  0.1660,  ..., -0.9980,  0.3169, -0.5898]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.1025, -1.2422,  0.3835,  ..., -1.1504,  0.1859, -0.5049]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'scatter' (ID: 14801)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 0.75)
+  Original activation: tensor([[ 0.3501, -0.4460, -0.5713,  ..., -0.8394, -0.2207,  0.9375]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5078, -1.1348, -0.3538,  ..., -0.9912, -0.3516,  1.0225]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ing' (ID: 292)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Loop scattering.
+
+================================================================================
+PROCESSING ROW 8/24
+Image: 2557_1_E2_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH STEERING (Alpha: 0.75, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 512
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 0.75)
+  Original activation: tensor([[ 0.4875, -0.4053,  1.2744,  ..., -0.7324, -1.6074, -0.3369]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.6455, -1.0938,  1.4922,  ..., -0.8848, -1.7383, -0.2517]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Loop' (ID: 21493)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 0.75)
+  Original activation: tensor([[-1.2324, -0.5923,  0.1918,  ..., -0.9858,  0.3350, -0.5195]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.0742, -1.2812,  0.4092,  ..., -1.1377,  0.2040, -0.4343]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'scatter' (ID: 14801)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 0.75)
+  Original activation: tensor([[ 0.3052, -0.4360, -0.5366,  ..., -0.7798, -0.2126,  0.8320]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.4629, -1.1250, -0.3191,  ..., -0.9316, -0.3438,  0.9170]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ing' (ID: 292)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Loop scattering.
+
+================================================================================
+PROCESSING ROW 9/24
+Image: 38434_1_E1_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH STEERING (Alpha: 0.75, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 512
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 0.75)
+  Original activation: tensor([[ 0.5029, -0.4282,  1.3564,  ..., -0.7363, -1.6719, -0.3384]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.6606, -1.1172,  1.5742,  ..., -0.8887, -1.8027, -0.2532]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '' (ID: 29871)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 0.75)
+  Original activation: tensor([[ 0.1426, -0.3530,  0.4980,  ..., -0.9443,  0.0435, -1.1230]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.3003, -1.0410,  0.7158,  ..., -1.0967, -0.0875, -1.0381]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '1' (ID: 29896)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 0.75)
+  Original activation: tensor([[-0.4333, -0.2230,  0.7578,  ..., -0.2344,  0.0444, -0.4580]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-0.2754, -0.9116,  0.9756,  ..., -0.3865, -0.0865, -0.3728]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: 'Background' (ID: 16585)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: 'ring' (ID: 9228)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '
+' (ID: 13)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '##' (ID: 2277)
+Step 8: Generating next token...
+⏭️  No steering applied at generation step 7
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 8
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: 1. Background ring
+
+================================================================================
+PROCESSING ROW 10/24
+Image: T3702_1_E1_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH STEERING (Alpha: 0.75, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 512
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 0.75)
+  Original activation: tensor([[ 0.4424, -0.4729,  1.2920,  ..., -0.7319, -1.6953, -0.3135]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.6001, -1.1611,  1.5098,  ..., -0.8838, -1.8262, -0.2283]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '' (ID: 29871)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 0.75)
+  Original activation: tensor([[ 0.0902, -0.4316,  0.5005,  ..., -0.9297,  0.0234, -1.0752]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.2480, -1.1201,  0.7178,  ..., -1.0820, -0.1075, -0.9902]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '1' (ID: 29896)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 0.75)
+  Original activation: tensor([[-0.4707, -0.2810,  0.7285,  ..., -0.2537,  0.1323, -0.4307]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-0.3130, -0.9697,  0.9463,  ..., -0.4058,  0.0013, -0.3455]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: 'Background' (ID: 16585)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: 'ring' (ID: 9228)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '
+' (ID: 13)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '##' (ID: 2277)
+Step 8: Generating next token...
+⏭️  No steering applied at generation step 7
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 8
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: 1. Background ring
+
+================================================================================
+PROCESSING ROW 11/24
+Image: 157568_1_E1_0001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH STEERING (Alpha: 0.75, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 512
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 0.75)
+  Original activation: tensor([[ 0.4834, -0.4121,  1.3340,  ..., -0.7280, -1.6240, -0.3423]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.6411, -1.1006,  1.5518,  ..., -0.8799, -1.7549, -0.2571]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Loop' (ID: 21493)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 0.75)
+  Original activation: tensor([[-1.2100, -0.6113,  0.2306,  ..., -1.0342,  0.2798, -0.5444]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.0518, -1.2998,  0.4482,  ..., -1.1865,  0.1488, -0.4592]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'scatter' (ID: 14801)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 0.75)
+  Original activation: tensor([[ 0.5034, -0.3032, -0.3354,  ..., -0.9062, -0.3086,  0.8296]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.6611, -0.9917, -0.1179,  ..., -1.0586, -0.4395,  0.9150]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ing' (ID: 292)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Loop scattering.
+
+================================================================================
+PROCESSING ROW 12/24
+Image: 12996_3_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH STEERING (Alpha: 0.75, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 512
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 0.75)
+  Original activation: tensor([[ 0.5796, -0.4324,  1.3848,  ..., -0.7070, -1.6465, -0.3408]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.7373, -1.1211,  1.6025,  ..., -0.8594, -1.7773, -0.2556]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '' (ID: 29871)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 0.75)
+  Original activation: tensor([[ 0.1649, -0.3252,  0.5142,  ..., -0.9297,  0.0618, -1.1006]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.3228, -1.0137,  0.7314,  ..., -1.0820, -0.0692, -1.0156]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '1' (ID: 29896)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 0.75)
+  Original activation: tensor([[-0.4724, -0.2400,  0.7524,  ..., -0.2651,  0.0327, -0.4651]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-0.3145, -0.9287,  0.9697,  ..., -0.4172, -0.0983, -0.3799]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: 'Background' (ID: 16585)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: 'ring' (ID: 9228)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '
+' (ID: 13)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '##' (ID: 2277)
+Step 8: Generating next token...
+⏭️  No steering applied at generation step 7
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 8
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: 1. Background ring
+
+================================================================================
+PROCESSING ROW 13/24
+Image: 61258_1_E1_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH STEERING (Alpha: 0.75, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 512
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 0.75)
+  Original activation: tensor([[ 0.4170, -0.4368,  1.2842,  ..., -0.7666, -1.6602, -0.3276]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5747, -1.1250,  1.5020,  ..., -0.9189, -1.7910, -0.2424]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Loop' (ID: 21493)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 0.75)
+  Original activation: tensor([[-1.2324, -0.5737,  0.1667,  ..., -1.0518,  0.3428, -0.5903]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.0742, -1.2617,  0.3843,  ..., -1.2041,  0.2118, -0.5049]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'scatter' (ID: 14801)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 0.75)
+  Original activation: tensor([[ 0.5049, -0.3623, -0.3906,  ..., -1.0293, -0.2300,  0.8848]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.6626, -1.0508, -0.1731,  ..., -1.1816, -0.3608,  0.9697]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ing' (ID: 292)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Loop scattering.
+
+================================================================================
+PROCESSING ROW 14/24
+Image: 105648_1_E1_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH STEERING (Alpha: 0.75, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 512
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 0.75)
+  Original activation: tensor([[ 0.3901, -0.3840,  1.2754,  ..., -0.7544, -1.6514, -0.3516]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5479, -1.0723,  1.4932,  ..., -0.9062, -1.7822, -0.2664]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Loop' (ID: 21493)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 0.75)
+  Original activation: tensor([[-1.2197, -0.5962,  0.1880,  ..., -1.0576,  0.2822, -0.5742]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.0615, -1.2852,  0.4055,  ..., -1.2100,  0.1512, -0.4890]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'scatter' (ID: 14801)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 0.75)
+  Original activation: tensor([[ 0.3459, -0.4385, -0.5166,  ..., -0.8174, -0.1775,  0.8960]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5039, -1.1270, -0.2991,  ..., -0.9697, -0.3086,  0.9814]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ing' (ID: 292)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Loop scattering.
+
+================================================================================
+PROCESSING ROW 15/24
+Image: 11014_2_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH STEERING (Alpha: 0.75, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 512
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 0.75)
+  Original activation: tensor([[ 0.4741, -0.3762,  1.2754,  ..., -0.7510, -1.6025, -0.3555]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.6318, -1.0645,  1.4932,  ..., -0.9033, -1.7334, -0.2703]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Loop' (ID: 21493)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 0.75)
+  Original activation: tensor([[-1.2021, -0.5645,  0.1825,  ..., -0.9937,  0.3711, -0.5459]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.0439, -1.2529,  0.3999,  ..., -1.1455,  0.2401, -0.4607]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'scatter' (ID: 14801)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 0.75)
+  Original activation: tensor([[ 0.3672, -0.4514, -0.5439,  ..., -0.7539, -0.2471,  0.8716]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5249, -1.1396, -0.3264,  ..., -0.9062, -0.3779,  0.9570]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ing' (ID: 292)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Loop scattering.
+
+================================================================================
+PROCESSING ROW 16/24
+Image: 125499_1_E1_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH STEERING (Alpha: 0.75, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 512
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 0.75)
+  Original activation: tensor([[ 0.3389, -0.3818,  1.2627,  ..., -0.7588, -1.6357, -0.3228]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.4966, -1.0703,  1.4805,  ..., -0.9111, -1.7666, -0.2375]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Loop' (ID: 21493)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 0.75)
+  Original activation: tensor([[-1.2773, -0.5757,  0.1389,  ..., -1.0566,  0.2583, -0.5781]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.1191, -1.2637,  0.3564,  ..., -1.2090,  0.1273, -0.4929]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'scatter' (ID: 14801)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 0.75)
+  Original activation: tensor([[ 0.4370, -0.3115, -0.3782,  ..., -0.9707, -0.1748,  0.8633]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5947, -1.0000, -0.1606,  ..., -1.1230, -0.3057,  0.9482]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ing' (ID: 292)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Loop scattering.
+
+================================================================================
+PROCESSING ROW 17/24
+Image: 106264_1_E2_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH STEERING (Alpha: 0.75, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 512
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 0.75)
+  Original activation: tensor([[ 0.3965, -0.3940,  1.2578,  ..., -0.7686, -1.6230, -0.3389]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5542, -1.0820,  1.4756,  ..., -0.9209, -1.7539, -0.2537]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Loop' (ID: 21493)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 0.75)
+  Original activation: tensor([[-1.2549, -0.5483,  0.2053,  ..., -1.0371,  0.3125, -0.5664]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.0967, -1.2363,  0.4229,  ..., -1.1895,  0.1815, -0.4812]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'scatter' (ID: 14801)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 0.75)
+  Original activation: tensor([[ 0.3250, -0.4045, -0.5151,  ..., -0.9087, -0.1908,  0.8638]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.4829, -1.0928, -0.2976,  ..., -1.0605, -0.3218,  0.9492]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ing' (ID: 292)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Loop scattering.
+
+================================================================================
+PROCESSING ROW 18/24
+Image: 117317_1_E2_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH STEERING (Alpha: 0.75, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 512
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 0.75)
+  Original activation: tensor([[ 0.3364, -0.3757,  1.2246,  ..., -0.7681, -1.6416, -0.3062]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.4941, -1.0645,  1.4424,  ..., -0.9199, -1.7725, -0.2209]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Loop' (ID: 21493)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 0.75)
+  Original activation: tensor([[-1.2773, -0.5239,  0.1467,  ..., -1.0615,  0.2920, -0.6006]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.1191, -1.2129,  0.3643,  ..., -1.2139,  0.1610, -0.5156]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'scatter' (ID: 14801)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 0.75)
+  Original activation: tensor([[ 0.4656, -0.2817, -0.4202,  ..., -1.0078, -0.2053,  0.8330]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.6235, -0.9702, -0.2026,  ..., -1.1602, -0.3364,  0.9180]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ing' (ID: 292)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Loop scattering.
+
+================================================================================
+PROCESSING ROW 19/24
+Image: 65158_1_E1.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH STEERING (Alpha: 0.75, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 512
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 0.75)
+  Original activation: tensor([[ 0.3394, -0.4028,  1.2354,  ..., -0.7539, -1.6650, -0.3120]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.4971, -1.0918,  1.4531,  ..., -0.9062, -1.7959, -0.2268]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Loop' (ID: 21493)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 0.75)
+  Original activation: tensor([[-1.3008, -0.5859,  0.1664,  ..., -1.0166,  0.2810, -0.5742]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.1426, -1.2744,  0.3838,  ..., -1.1689,  0.1500, -0.4890]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'scatter' (ID: 14801)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 0.75)
+  Original activation: tensor([[ 0.5151, -0.3459, -0.4150,  ..., -0.9224, -0.2328,  0.8867]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.6729, -1.0342, -0.1975,  ..., -1.0742, -0.3638,  0.9717]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ing' (ID: 292)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Loop scattering.
+
+================================================================================
+PROCESSING ROW 20/24
+Image: 165065_3_0001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH STEERING (Alpha: 0.75, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 512
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 0.75)
+  Original activation: tensor([[ 0.3584, -0.3740,  1.2520,  ..., -0.7808, -1.6484, -0.3457]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5161, -1.0625,  1.4697,  ..., -0.9326, -1.7793, -0.2605]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Loop' (ID: 21493)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 0.75)
+  Original activation: tensor([[-1.2305, -0.5791,  0.1844,  ..., -1.0713,  0.2583, -0.6035]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.0723, -1.2676,  0.4019,  ..., -1.2236,  0.1273, -0.5186]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'scatter' (ID: 14801)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 0.75)
+  Original activation: tensor([[ 0.3030, -0.3884, -0.5146,  ..., -0.8306, -0.1761,  0.9048]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.4609, -1.0771, -0.2971,  ..., -0.9824, -0.3071,  0.9902]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ing' (ID: 292)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Loop scattering.
+
+================================================================================
+PROCESSING ROW 21/24
+Image: 143938_1_E1_0001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH STEERING (Alpha: 0.75, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 512
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 0.75)
+  Original activation: tensor([[ 0.4053, -0.4009,  1.2852,  ..., -0.7510, -1.6494, -0.3428]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5630, -1.0898,  1.5029,  ..., -0.9033, -1.7803, -0.2576]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Loop' (ID: 21493)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 0.75)
+  Original activation: tensor([[-1.2285, -0.6182,  0.1646,  ..., -1.0791,  0.2737, -0.5928]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.0703, -1.3066,  0.3821,  ..., -1.2314,  0.1427, -0.5078]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'scatter' (ID: 14801)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 0.75)
+  Original activation: tensor([[ 0.5435, -0.3242, -0.4077,  ..., -0.9805, -0.3306,  0.8672]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.7012, -1.0127, -0.1902,  ..., -1.1328, -0.4614,  0.9521]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ing' (ID: 292)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Loop scattering.
+
+================================================================================
+PROCESSING ROW 22/24
+Image: djk5-15_1_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH STEERING (Alpha: 0.75, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 512
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 0.75)
+  Original activation: tensor([[ 0.3657, -0.4424,  1.2773,  ..., -0.7261, -1.7275, -0.3110]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5234, -1.1309,  1.4951,  ..., -0.8779, -1.8584, -0.2258]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Loop' (ID: 21493)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 0.75)
+  Original activation: tensor([[-1.3213, -0.6807,  0.2001,  ..., -1.0020,  0.3301, -0.5635]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.1631, -1.3691,  0.4175,  ..., -1.1543,  0.1991, -0.4783]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'scatter' (ID: 14801)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 0.75)
+  Original activation: tensor([[ 0.3633, -0.4517, -0.4578,  ..., -0.7637, -0.2295,  0.9971]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5210, -1.1406, -0.2402,  ..., -0.9160, -0.3604,  1.0820]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ing' (ID: 292)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Loop scattering.
+
+================================================================================
+PROCESSING ROW 23/24
+Image: 121698_2_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH STEERING (Alpha: 0.75, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 512
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 0.75)
+  Original activation: tensor([[ 0.4746, -0.4497,  1.3633,  ..., -0.7275, -1.6602, -0.3184]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.6323, -1.1387,  1.5811,  ..., -0.8799, -1.7910, -0.2332]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '' (ID: 29871)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 0.75)
+  Original activation: tensor([[ 0.1503, -0.4070,  0.4868,  ..., -0.9429,  0.0559, -1.1426]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.3081, -1.0957,  0.7041,  ..., -1.0947, -0.0751, -1.0576]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '1' (ID: 29896)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 0.75)
+  Original activation: tensor([[-0.3879, -0.2249,  0.8242,  ..., -0.2651,  0.0500, -0.4395]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-0.2301, -0.9131,  1.0420,  ..., -0.4172, -0.0809, -0.3542]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: '.' (ID: 29889)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: 'Background' (ID: 16585)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: 'ring' (ID: 9228)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '
+' (ID: 13)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '##' (ID: 2277)
+Step 8: Generating next token...
+⏭️  No steering applied at generation step 7
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 8
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: 1. Background ring
+
+================================================================================
+PROCESSING ROW 24/24
+Image: 126503_1_E1_001.png
+Prompt: This is a 2D X-ray diffraction (XRD) image with anomalies in it. The possible anomaly options are:
+O...
+Expected Answer: Loop scattering.
+================================================================================
+
+=== GENERATING WITH STEERING (Alpha: 0.75, Layer: 16) ===
+Generated text: Starting generation with prompt length: 195
+Steering will be applied to last token of prompt and first 2 generated tokens only
+Max new tokens: 512
+--------------------------------------------------
+Step 1: Processing prompt embeddings...
+✅ Steering applied at generation step 0 (alpha: 0.75)
+  Original activation: tensor([[ 0.3638, -0.3545,  1.2568,  ..., -0.7729, -1.6250, -0.3398]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.5215, -1.0430,  1.4746,  ..., -0.9248, -1.7559, -0.2546]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'Loop' (ID: 21493)
+Step 2: Generating next token...
+✅ Steering applied at generation step 1 (alpha: 0.75)
+  Original activation: tensor([[-1.2559, -0.5381,  0.1973,  ..., -1.0361,  0.2822, -0.6035]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[-1.0977, -1.2266,  0.4148,  ..., -1.1885,  0.1512, -0.5186]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'scatter' (ID: 14801)
+Step 3: Generating next token...
+✅ Steering applied at generation step 2 (alpha: 0.75)
+  Original activation: tensor([[ 0.3113, -0.4243, -0.5098,  ..., -0.8184, -0.1831,  0.9229]],
+       device='cuda:0', dtype=torch.float16)
+  Steered activation:  tensor([[ 0.4692, -1.1133, -0.2922,  ..., -0.9707, -0.3140,  1.0078]],
+       device='cuda:0', dtype=torch.float16)
+Generated token: 'ing' (ID: 292)
+Step 4: Generating next token...
+⏭️  No steering applied at generation step 3
+Generated token: '.' (ID: 29889)
+Step 5: Generating next token...
+⏭️  No steering applied at generation step 4
+Generated token: '
+' (ID: 13)
+Step 6: Generating next token...
+⏭️  No steering applied at generation step 5
+Generated token: '##' (ID: 2277)
+Step 7: Generating next token...
+⏭️  No steering applied at generation step 6
+Generated token: '#' (ID: 29937)
+
+🛑 STOPPING CRITERIA MET at step 7
+
+
+=== GENERATING BENIGN RESPONSE (NO STEERING) ===
+Generated text: 
+✓ SUCCESS: Generated text: Loop scattering.
+
+Results saved to ./CAA_generation_results_layer_16_alpha_0.75_loop_artifact.csv
+Processed 24 items successfully

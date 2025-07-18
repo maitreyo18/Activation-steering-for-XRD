@@ -1,0 +1,7 @@
+Anomaly, alpha, wrong_answer_for_CAA
+Bg ring, 0.2, artifact
+Non-uniform detector, 1.0, bg ring
+Strong background, 1.2, artifact
+Loop scattering, 0.75, artifact
+Artifcat, default model,
+Ice ring, 0.7, strong bg

@@ -1,0 +1,87 @@
+Thu Jul 17 13:58:24 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 565.57.01              Driver Version: 565.57.01      CUDA Version: 12.7     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla V100-PCIE-32GB           On  |   00000000:3B:00.0 Off |                    0 |
+| N/A   35C    P0             40W /  250W |       1MiB /  32768MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+/depot/amannodi/apps/ASTRA/envs/astra_minigpt/lib/python3.10/site-packages/transformers/utils/hub.py:127: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/eva_vit.py:433: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(cached_file, map_location="cpu")
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:77: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(cached_file, map_location="cpu")
+You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama.LlamaTokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565 - if you loaded a llama tokenizer from a GGUF file you can ignore this message
+The `load_in_4bit` and `load_in_8bit` arguments are deprecated and will be removed in the future versions. Please, pass a `BitsAndBytesConfig` object in `quantization_config` argument instead.
+=== Composite Steering Generation with Multiple Anomaly Types ===
+CSV File: ./test_combined.csv
+Image Directory: ../datasets/XRD_data/one_correct/combined_images
+Layer: 16
+Loading VIT
+Loading VIT Done
+Loading Q-Former
+Loading Q-Former Done
+Loading LLAMA
+Downloading shards:   0%|          | 0/3 [00:00<?, ?it/s]Downloading shards: 100%|██████████| 3/3 [00:00<00:00, 569.96it/s]
+/depot/amannodi/apps/ASTRA/envs/astra_minigpt/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:519: UserWarning: `pad_token_id` should be positive but got -1. This will cause errors when batch generating, if there is padding. Please set `pad_token_id` explicitly by `model.generation_config.pad_token_id=PAD_TOKEN_ID` to avoid errors in generation, and ensure your `input_ids` input does not have negative values.
+  warnings.warn(
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:10<00:21, 10.87s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:20<00:10, 10.28s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:26<00:00,  8.35s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:26<00:00,  8.93s/it]
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/mini_gpt4.py:274: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(ckpt_path, map_location="cpu")
+You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama_fast.LlamaTokenizerFast'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565 - if you loaded a llama tokenizer from a GGUF file you can ignore this message.
+/scratch/gilbreth/biswasm/ASTRA_updated/composite_steering_minigpt4/./test_steering_composite.py:90: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  steering_data = torch.load(path)
+Loading LLAMA Done
+Load BLIP2-LLM Checkpoint: /scratch/gilbreth/biswasm/ASTRA_updated/ckpts/pretrained_minigpt4.pth
+[Model Initialized]
+
+=== Loading Composite Steering Vectors ===
+Alpha values:
+  Background Ring: 0.02
+  Ice Ring: 0.07
+  Loop Scattering: 0.075
+  Strong Background: 0.12
+  Non-uniform Detector: 0.1
+
+Loading background_ring from: ../CAA_modified_minigpt4/Bg_ring_act/act_diff_12-20_gen_600_standby.pt
+  ✓ Loaded background_ring vector (norm: 58.9688)
+Loading ice_ring from: ../CAA_modified_minigpt4/Ice_ring/ice_ring_act_diff_12-20_76_artifact.pt
+  ✓ Loaded ice_ring vector (norm: 58.4375)
+Loading loop_scattering from: ../CAA_modified_minigpt4/Loop_scattering/loop_scattering_act_diff_12-20_99_artifact.pt
+  ✓ Loaded loop_scattering vector (norm: 61.6562)
+Loading strong_background from: ../CAA_modified_minigpt4/Strong_background/strong_bg_act_diff_12-20_149_artifact.pt
+  ✓ Loaded strong_background vector (norm: 40.8750)
+Loading nonuniform_detector from: ../CAA_modified_minigpt4/Non-uniform_detect/act_diff_12-20_nu_detect_259_bg_ring.pt
+  ✓ Loaded nonuniform_detector vector (norm: 59.1562)
+
+=== Computing Composite Steering Vector ===
+  background_ring: alpha=0.02, contribution_norm=1.1797
+  ice_ring: alpha=0.07, contribution_norm=4.0898
+  loop_scattering: alpha=0.075, contribution_norm=4.6250
+  strong_background: alpha=0.12, contribution_norm=4.9062
+  nonuniform_detector: alpha=0.1, contribution_norm=5.9141
+
+Final composite vector norm: 11.1016
+==================================================
+Reading CSV file: ./test_combined.csv
+Found 40 items to process
+Processing items:   0%|          | 0/40 [00:00<?, ?it/s]/scratch/gilbreth/biswasm/ASTRA_updated/composite_steering_minigpt4/./test_steering_composite.py:254: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.no_grad(), torch.cuda.amp.autocast():
+/scratch/gilbreth/biswasm/ASTRA_updated/minigpt4/models/blip2.py:41: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  return torch.cuda.amp.autocast(dtype=dtype)
+/depot/amannodi/apps/ASTRA/envs/astra_minigpt/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:545: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+Processing items:   2%|▎         | 1/40 [00:15<09:49, 15.12s/it]Processing items:   5%|▌         | 2/40 [00:23<07:10, 11.33s/it]Processing items:   8%|▊         | 3/40 [00:32<06:14, 10.11s/it]Processing items:  10%|█         | 4/40 [00:41<05:43,  9.54s/it]Processing items:  12%|█▎        | 5/40 [00:49<05:23,  9.23s/it]Processing items:  15%|█▌        | 6/40 [00:58<05:07,  9.04s/it]Processing items:  18%|█▊        | 7/40 [01:07<04:54,  8.93s/it]Processing items:  20%|██        | 8/40 [01:15<04:43,  8.84s/it]Processing items:  22%|██▎       | 9/40 [01:24<04:32,  8.79s/it]Processing items:  25%|██▌       | 10/40 [01:33<04:22,  8.75s/it]Processing items:  28%|██▊       | 11/40 [01:41<04:13,  8.73s/it]Processing items:  30%|███       | 12/40 [01:50<04:04,  8.72s/it]Processing items:  32%|███▎      | 13/40 [01:59<03:54,  8.70s/it]Processing items:  35%|███▌      | 14/40 [02:07<03:46,  8.70s/it]Processing items:  38%|███▊      | 15/40 [02:16<03:37,  8.69s/it]Processing items:  40%|████      | 16/40 [02:25<03:28,  8.68s/it]Processing items:  42%|████▎     | 17/40 [02:33<03:19,  8.67s/it]Processing items:  45%|████▌     | 18/40 [02:42<03:10,  8.68s/it]Processing items:  48%|████▊     | 19/40 [02:51<03:02,  8.67s/it]Processing items:  50%|█████     | 20/40 [02:59<02:53,  8.67s/it]Processing items:  52%|█████▎    | 21/40 [03:08<02:44,  8.68s/it]Processing items:  55%|█████▌    | 22/40 [03:17<02:36,  8.67s/it]Processing items:  57%|█████▊    | 23/40 [03:25<02:27,  8.66s/it]Processing items:  60%|██████    | 24/40 [03:34<02:18,  8.66s/it]Processing items:  62%|██████▎   | 25/40 [03:43<02:10,  8.67s/it]Processing items:  65%|██████▌   | 26/40 [03:51<02:01,  8.67s/it]Processing items:  68%|██████▊   | 27/40 [04:00<01:52,  8.66s/it]Processing items:  70%|███████   | 28/40 [04:09<01:43,  8.67s/it]Processing items:  72%|███████▎  | 29/40 [04:17<01:35,  8.67s/it]Processing items:  75%|███████▌  | 30/40 [04:26<01:26,  8.67s/it]Processing items:  78%|███████▊  | 31/40 [04:35<01:18,  8.67s/it]slurmstepd: error: *** JOB 9068628 ON gilbreth-f000 CANCELLED AT 2025-07-17T14:05:00 ***
