@@ -44,3 +44,7 @@ Each directory has corresponding .sh files as well for reference usage and batch
 Producing the heatmap using a "composite" steering vector
 
 Or maybe trying to compose composite vectors for each anomaly such that for example composite v_bg_ring such that it shows bg_ring for bg_ring images and different for the others.
+
+# Offline Usage
+If using a HPC system, to first download the minigpt4 dependcies use the ./Offline_usage/minigpt4_dependency_downloader.py and the corresponding cache_minigpt4.sh submission file. Update the ./eval_configs/minigpt4_eval.yaml. Also download checkpoint of minigpt4-13B (pretrained_minigpt4.pth) from huggingface from https://huggingface.co/Vision-CAIR/MiniGPT-4/tree/main. 
+AFter download just update the ./eval_configs/minigpt4_eval.yaml with an additional path (Example: llama_model: '/scratch/gilbreth/biswasm/ASTRA_updated/Cached_minigpt4/models/models--Vision-CAIR--vicuna/snapshots/c80b8c2ca66c2efc88915f45a7d13f151fdace45'   # 👈 add this). The full example minigpt4_eval.yaml is also included inside cache_minigpt4.sh.
